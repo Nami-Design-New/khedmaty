@@ -35,6 +35,8 @@ $main: #000000;
 $second: #fc6240;
 $white: #ffffff;
 $text: #999999;
+$stroke: #f4f4f4;
+$border: #eee;
 $light_bg: #fafafa;
 $shadow: 0 0 10px rgba(0, 0, 0, .1);
 $transition: all .3s ease-in-out;
@@ -242,6 +244,18 @@ header {
         transition: $transition;
         &:hover {
           color: $second;
+        }
+      }
+      .dropdown {
+        .dropdown-menu {
+          transform: translate3d(-70px, 50px, 0px) !important;
+          padding: 0;
+          overflow: hidden;
+          a {
+            font-size: 12px;
+          }
+          box-shadow: $shadow;
+          border: 0;
         }
       }
       .cart_open {
@@ -564,7 +578,7 @@ main {
   .services_bar {
     width: 100%;
     height: 100px;
-    background: #fafafa;
+    background: $light_bg;
     .swiper {
       height: 100%;
       display: flex;
@@ -627,7 +641,7 @@ main {
     .category {
       padding: 16px;
       border-radius: 8px;
-      border: 1px solid #eee;
+      border: 1px solid $border;
       display: flex;
       height: 100%;
       .img {
@@ -811,7 +825,7 @@ main {
       width: 100%;
       height: 100%;
       padding: 16px;
-      border: 1px solid #eee;
+      border: 1px solid $border;
       border-radius: 8px;
       a {
         width: 100%;
@@ -894,7 +908,7 @@ main {
     }
   }
   .newsletter {
-    background: #fafafa;
+    background: $light_bg;
     width: 100%;
     padding: 60px 16px;
     form {
@@ -950,10 +964,290 @@ main {
       }
     }
   }
+  .page_header {
+    width: 100%;
+    height: 60px;
+    background: $white;
+    h6 {
+      font-size: 14px;
+      color: $main;
+      margin: 0;
+      i {
+        padding: 0 12px;
+      }
+      a {
+        color: $main;
+        transition: $transition;
+        &:hover {
+          color: $second;
+        }
+      }
+    }
+  }
+  .contact-us {
+    padding: 40px 16px 60px;
+    .info {
+      width: 100%;
+      padding: 16px;
+      background: $light_bg;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: $transition;
+      .icon {
+        width: 60px;
+        height: 60px;
+        @include centerFlex();
+        border: 1px solid $border;
+        border-radius: 50%;
+        img {
+          height: 28px;
+        }
+      }
+      p {
+        font-size: 14px;
+        color: $main;
+      }
+      a {
+        color: $main;
+        font-size: 14px;
+        transition: $transition;
+        &:hover {
+          color: $second;
+        }
+      }
+      &:hover {
+        box-shadow: $shadow;
+        a,
+        p {
+          color: $second;
+        }
+      }
+    }
+    form {
+      padding: 48px 32px;
+      background: $white;
+      border: 1px solid $border;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      margin-top: 12px;
+      @media (max-width: 576px) {
+        padding: 32px 0;
+      }
+      .form-group {
+        display: flex;
+        width: 100%;
+        @media (max-width: 768px) {
+          flex-direction: column;
+          gap: 48px;
+        }
+        .inputfield {
+          width: 100%;
+          padding: 0 32px;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          @media (max-width: 576px) {
+            padding: 0 16px;
+          }
+          label {
+            position: absolute;
+            font-size: 14px;
+            color: $main;
+            right: 32px;
+            transform: translateY(-50%);
+            top: 50%;
+            transition: $transition;
+            cursor: auto;
+            @media (max-width: 576px) {
+              right: 16px;
+            }
+            &.message-label {
+              top: 20%;
+            }
+            &.h {
+              top: -4px;
+              color: $second;
+            }
+          }
+          input,
+          textarea {
+            width: 100%;
+            height: 45px;
+            @include clearInput();
+            &:focus + span::after {
+              width: calc(100% - 64px);
+              @media (max-width: 576px) {
+                width: calc(100% - 32px);
+              }
+            }
+          }
+          textarea {
+            padding: 16px 0;
+            height: 130px;
+          }
+          .highlight {
+            width: 100%;
+            height: 2px;
+            background: #eeeeee;
+            &::after {
+              content: "";
+              width: 0;
+              transition: $transition;
+              left: 50%;
+              height: 2px;
+              background: $second;
+              position: absolute;
+              transform: translate(-50%);
+            }
+          }
+        }
+      }
+      button {
+        @include clearInput();
+        align-self: flex-end;
+        margin-left: 32px;
+        isolation: isolate;
+        padding: 0 16px;
+        font-size: 14px;
+        width: 166px;
+        height: 50px;
+        background: $main;
+        color: $white;
+        border-radius: 4px;
+        @include centerFlex();
+        position: relative;
+        overflow: hidden;
+        transition: $transition;
+        &:hover {
+          background: $second;
+        }
+        @media (max-width: 576px) {
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+  .auth {
+    padding: 40px 16px;
+    .auth-head {
+      text-align: center;
+      font-size: 18px;
+      color: $main;
+      font-weight: 600;
+    }
+    .auth-subhead {
+      text-align: center;
+      font-size: 14px;
+      font-family: 'montserrat_light', sans-serif;
+      color: $text;
+    }
+    form {
+      width: 100%;
+      padding: 32px 40px;
+      display: flex;
+      gap: 12px;
+      flex-direction: column;
+      @media (max-width: 576px) {
+        padding: 32px 0;
+      }
+      .form-group {
+        display: flex;
+        gap: 12px;
+        @media (max-width: 576px) {
+          flex-direction: column;
+        }
+      }
+      .input_field {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        label {
+          font-size: 12px;
+          color: $main;
+        }
+        input {
+          height: 54px;
+          background: $light_bg;
+          border: 1px solid $stroke;
+          border-radius: 4px;
+          padding: 8px 12px;
+          font-size: 12px;
+          direction: rtl;
+          outline: none;
+        }
+      }
+      .reset {
+        text-align: end;
+        font-size: 12px;
+        color: $main;
+        transition: $transition;
+        &:hover {
+          color: $second;
+        }
+      }
+      .login {
+        width: 100%;
+        @include clearInput();
+        height: 54px;
+        border-radius: 4px;
+        background: $main;
+        color: $white;
+        font-size: 14px;
+        transition: $transition;
+        &:hover {
+          background: $second;
+        }
+      }
+      p {
+        color: $main;
+        font-size: 12px;
+        a {
+          color: $second;
+        }
+      }
+      .line {
+        width: 100%;
+        height: 1px;
+        background: $border;
+        margin: 20px 0;
+        position: relative;
+        span {
+          @include centerAbsolute();
+          font-size: 12px;
+          color: $main;
+          background: $white;
+          padding: 0 8px;
+        }
+      }
+      .google-login {
+        width: 100%;
+        height: 54px;
+        @include clearInput();
+        border: 1px solid $stroke;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+      .noAccount {
+        font-size: 12px;
+        color: $main;
+        transition: $transition;
+        &:hover {
+          color: $second;
+        }
+      }
+    }
+  }
 }
 footer {
   width: 100%;
   padding: 60px 16px 40px;
+  border-top: 1px solid $border;
   .about_company {
     display: flex;
     flex-direction: column;
@@ -1030,7 +1324,7 @@ footer {
     }
   }
   .copy_pay {
-    border-top: 1px solid #eee;
+    border-top: 1px solid $border;
     @include space-between();
     padding-top: 20px;
     margin-top: 20px;
@@ -1084,7 +1378,7 @@ footer {
         input {
           width: 100%;
           @include clearInput();
-          border: 1px solid #eee;
+          border: 1px solid $border;
           height: 56px;
           border-radius: 8px;
           padding: 8px;
@@ -1095,7 +1389,7 @@ footer {
         width: 100%;
         @include space-between();
         padding: 24px 0 8px;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid $border;
         p {
           font-size: 14px;
           color: $main;
@@ -1118,7 +1412,7 @@ footer {
 .product_crad {
   width: 100%;
   height: 100%;
-  border: 1px solid #eee;
+  border: 1px solid $border;
   transition: $transition;
   border-radius: 8px;
   .product_image {
@@ -1215,7 +1509,7 @@ footer {
   height: 100%;
   border-radius: 8px;
   transition: $transition;
-  border: 1px solid #eee;
+  border: 1px solid $border;
   .service_image {
     width: 100%;
     padding: 8px;

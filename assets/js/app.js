@@ -91,3 +91,19 @@ toggler.addEventListener("click", () => {
     toggler.classList.remove("close");
   }
 });
+//contact higlight inputs
+const inputs = document.querySelectorAll('.inputfield input, .inputfield textarea');
+function highlight(event) {
+  const label = event.target.previousElementSibling;
+  label.classList.add("h");
+}
+function dehighlight(event) {
+  const label = event.target.previousElementSibling;
+  if (event.target.value === "") {
+    label.classList.remove("h");
+  }
+}
+inputs.forEach(input => {
+  input.addEventListener('focus', highlight);
+  input.addEventListener('blur', dehighlight);
+});

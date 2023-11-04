@@ -246,6 +246,16 @@ header nav .search a {
 header nav .search a:hover {
   color: #fc6240;
 }
+header nav .search .dropdown .dropdown-menu {
+  transform: translate3d(-70px, 50px, 0px) !important;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 0;
+}
+header nav .search .dropdown .dropdown-menu a {
+  font-size: 12px;
+}
 header nav .search .cart_open {
   cursor: pointer;
   position: relative;
@@ -995,10 +1005,323 @@ main .newsletter form .form button:hover {
 main .newsletter form .form button:hover i {
   transform: translate(-8px, 1px);
 }
+main .page_header {
+  width: 100%;
+  height: 60px;
+  background: #ffffff;
+}
+main .page_header h6 {
+  font-size: 14px;
+  color: #000000;
+  margin: 0;
+}
+main .page_header h6 i {
+  padding: 0 12px;
+}
+main .page_header h6 a {
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+main .page_header h6 a:hover {
+  color: #fc6240;
+}
+main .contact-us {
+  padding: 40px 16px 60px;
+}
+main .contact-us .info {
+  width: 100%;
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+main .contact-us .info .icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  border-radius: 50%;
+}
+main .contact-us .info .icon img {
+  height: 28px;
+}
+main .contact-us .info p {
+  font-size: 14px;
+  color: #000000;
+}
+main .contact-us .info a {
+  color: #000000;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+main .contact-us .info a:hover {
+  color: #fc6240;
+}
+main .contact-us .info:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+main .contact-us .info:hover a,
+main .contact-us .info:hover p {
+  color: #fc6240;
+}
+main .contact-us form {
+  padding: 48px 32px;
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 12px;
+}
+@media (max-width: 576px) {
+  main .contact-us form {
+    padding: 32px 0;
+  }
+}
+main .contact-us form .form-group {
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  main .contact-us form .form-group {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+main .contact-us form .form-group .inputfield {
+  width: 100%;
+  padding: 0 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 576px) {
+  main .contact-us form .form-group .inputfield {
+    padding: 0 16px;
+  }
+}
+main .contact-us form .form-group .inputfield label {
+  position: absolute;
+  font-size: 14px;
+  color: #000000;
+  right: 32px;
+  transform: translateY(-50%);
+  top: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: auto;
+}
+@media (max-width: 576px) {
+  main .contact-us form .form-group .inputfield label {
+    right: 16px;
+  }
+}
+main .contact-us form .form-group .inputfield label.message-label {
+  top: 20%;
+}
+main .contact-us form .form-group .inputfield label.h {
+  top: -4px;
+  color: #fc6240;
+}
+main .contact-us form .form-group .inputfield input,
+main .contact-us form .form-group .inputfield textarea {
+  width: 100%;
+  height: 45px;
+  border: none;
+  background: none;
+  outline: none;
+}
+main .contact-us form .form-group .inputfield input:focus + span::after,
+main .contact-us form .form-group .inputfield textarea:focus + span::after {
+  width: calc(100% - 64px);
+}
+@media (max-width: 576px) {
+  main .contact-us form .form-group .inputfield input:focus + span::after,
+  main .contact-us form .form-group .inputfield textarea:focus + span::after {
+    width: calc(100% - 32px);
+  }
+}
+main .contact-us form .form-group .inputfield textarea {
+  padding: 16px 0;
+  height: 130px;
+}
+main .contact-us form .form-group .inputfield .highlight {
+  width: 100%;
+  height: 2px;
+  background: #eeeeee;
+}
+main .contact-us form .form-group .inputfield .highlight::after {
+  content: "";
+  width: 0;
+  transition: all 0.3s ease-in-out;
+  left: 50%;
+  height: 2px;
+  background: #fc6240;
+  position: absolute;
+  transform: translate(-50%);
+}
+main .contact-us form button {
+  border: none;
+  background: none;
+  outline: none;
+  align-self: flex-end;
+  margin-left: 32px;
+  isolation: isolate;
+  padding: 0 16px;
+  font-size: 14px;
+  width: 166px;
+  height: 50px;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+main .contact-us form button:hover {
+  background: #fc6240;
+}
+@media (max-width: 576px) {
+  main .contact-us form button {
+    margin-left: 16px;
+  }
+}
+main .auth {
+  padding: 40px 16px;
+}
+main .auth .auth-head {
+  text-align: center;
+  font-size: 18px;
+  color: #000000;
+  font-weight: 600;
+}
+main .auth .auth-subhead {
+  text-align: center;
+  font-size: 14px;
+  font-family: "montserrat_light", sans-serif;
+  color: #999999;
+}
+main .auth form {
+  width: 100%;
+  padding: 32px 40px;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+@media (max-width: 576px) {
+  main .auth form {
+    padding: 32px 0;
+  }
+}
+main .auth form .form-group {
+  display: flex;
+  gap: 12px;
+}
+@media (max-width: 576px) {
+  main .auth form .form-group {
+    flex-direction: column;
+  }
+}
+main .auth form .input_field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+main .auth form .input_field label {
+  font-size: 12px;
+  color: #000000;
+}
+main .auth form .input_field input {
+  height: 54px;
+  background: #fafafa;
+  border: 1px solid #f4f4f4;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 12px;
+  direction: rtl;
+  outline: none;
+}
+main .auth form .reset {
+  text-align: end;
+  font-size: 12px;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+main .auth form .reset:hover {
+  color: #fc6240;
+}
+main .auth form .login {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  height: 54px;
+  border-radius: 4px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+main .auth form .login:hover {
+  background: #fc6240;
+}
+main .auth form p {
+  color: #000000;
+  font-size: 12px;
+}
+main .auth form p a {
+  color: #fc6240;
+}
+main .auth form .line {
+  width: 100%;
+  height: 1px;
+  background: #eee;
+  margin: 20px 0;
+  position: relative;
+}
+main .auth form .line span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #000000;
+  background: #ffffff;
+  padding: 0 8px;
+}
+main .auth form .google-login {
+  width: 100%;
+  height: 54px;
+  border: none;
+  background: none;
+  outline: none;
+  border: 1px solid #f4f4f4;
+  font-size: 14px;
+  border-radius: 4px;
+}
+main .auth form .noAccount {
+  font-size: 12px;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+main .auth form .noAccount:hover {
+  color: #fc6240;
+}
 
 footer {
   width: 100%;
   padding: 60px 16px 40px;
+  border-top: 1px solid #eee;
 }
 footer .about_company {
   display: flex;
