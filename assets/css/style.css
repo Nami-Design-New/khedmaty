@@ -1256,6 +1256,12 @@ footer .copy_pay .payments ul img {
 .product_crad .product_info .rate_sale p .old_price {
   text-decoration: line-through;
 }
+@media (max-width: 576px) {
+  .product_crad .product_info .rate_sale {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .product_crad:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-color: transparent;
