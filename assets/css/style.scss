@@ -789,7 +789,7 @@ main {
             border-color: $second;
           }
           @media (max-width: 768px) {
-            width: calc(40% - 8px);
+            width: calc(80% - 8px);
           }
         }
       }
@@ -924,6 +924,9 @@ main {
           background: $white;
           font-size: 14px;
           border-radius: 0 4px 4px 0;
+          @media (max-width: 576px) {
+            flex: 2;
+          }
         }
         button {
           flex: 1;

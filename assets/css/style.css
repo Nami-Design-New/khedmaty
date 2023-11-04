@@ -829,7 +829,7 @@ main .store_section .section_tabs ul li:hover, main .store_section .section_tabs
 }
 @media (max-width: 768px) {
   main .store_section .section_tabs ul li {
-    width: calc(40% - 8px);
+    width: calc(80% - 8px);
   }
 }
 main .store_section .section_tabs.services {
@@ -968,6 +968,11 @@ main .newsletter form .form input {
   background: #ffffff;
   font-size: 14px;
   border-radius: 0 4px 4px 0;
+}
+@media (max-width: 576px) {
+  main .newsletter form .form input {
+    flex: 2;
+  }
 }
 main .newsletter form .form button {
   flex: 1;
