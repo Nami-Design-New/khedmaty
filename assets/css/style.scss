@@ -578,7 +578,7 @@ main {
   .services_bar {
     width: 100%;
     height: 100px;
-    background: $light_bg;
+    background: $second;
     .swiper {
       height: 100%;
       display: flex;
@@ -592,39 +592,32 @@ main {
       img {
         max-height: 24px;
         object-fit: contain;
+        filter: brightness(0) invert(1);
       }
       h6 {
-        color: $main;
+        color: $white;
         font-size: 14px;
       }
     }
   }
   .popular_categories {
     padding: 60px 16px 40px;
-    .feature {
-      @include centerFlex();
-      flex-direction: column;
-      gap: 12px;
-      img {
-        height: 48px;
+    .shop_all {
+      font-size: 14px;
+      color: $second;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: $transition;
+      i {
+        transform: translateY(2px);
       }
-      h5 {
-        font-size: 16px;
-        color: $main;
-        margin: 0;
-        text-align: center;
-        font-weight: 600;
-      }
-      p {
-        font-size: 12px;
-        color: $text;
-        text-align: center;
-        line-height: 22px;
+      &:hover {
+        gap: 8px;
       }
     }
     .section_head {
       font-size: 22px;
-      padding: 24px 0;
       color: $main;
       position: relative;
       margin-right: 54px;
@@ -635,7 +628,7 @@ main {
         background: $second;
         position: absolute;
         right: -54px;
-        bottom: 32px;
+        bottom: 8px;
       }
     }
     .category {
@@ -644,6 +637,7 @@ main {
       border: 1px solid $border;
       display: flex;
       height: 100%;
+      transition: $transition;
       .img {
         flex: 1;
         height: 100%;
@@ -671,10 +665,8 @@ main {
           padding-right: 12px;
           li {
             font-size: 12px;
-            a {
-              line-height: 22px;
-              color: $text;
-            }
+            line-height: 26px;
+            color: $text;
           }
         }
         .shop_all {
@@ -691,6 +683,10 @@ main {
             gap: 8px;
           }
         }
+      }
+      &:hover {
+        box-shadow: $shadow;
+        border-color: transparent;
       }
     }
   }
@@ -792,6 +788,7 @@ main {
           border-bottom: 2px solid transparent;
           img {
             height: 32px;
+            object-fit: contain;
           }
           h6 {
             font-size: 12px;
@@ -811,9 +808,86 @@ main {
         height: 60px;
       }
     }
+    .rendered_products {
+      display: flex;
+      padding: 16px 12px;
+      overflow-x: auto;
+      scroll-snap-align: start;
+      scroll-snap-type: x mandatory;
+      gap: 16px;
+      overflow-y: hidden;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .product_crad {
+        min-width: 268px;
+      }
+    }
+  }
+  .stores {
+    padding: 60px 16px;
+    background: $light_bg;
+    .section_head {
+      h3 {
+        font-size: 16px;
+        color: $main;
+        font-weight: 600;
+      }
+      a {
+        font-size: 14px;
+        color: $second;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        transition: $transition;
+        i {
+          transform: translateY(2px);
+        }
+        &:hover {
+          gap: 8px;
+        }
+      }
+    }
+    .stores_cards {
+      display: flex;
+      padding: 16px 12px;
+      overflow-x: auto;
+      scroll-snap-align: start;
+      scroll-snap-type: x mandatory;
+      gap: 16px;
+      overflow-y: hidden;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .store_card {
+        min-width: 268px;
+        padding: 24px;
+        background: $white;
+        border-radius: 8px;
+        @include centerFlex();
+        flex-direction: column;
+        transition: $transition;
+        gap: 8px;
+        h6 {
+          color: $main;
+          font-size: 14px;
+        }
+        .logo {
+          width: 100%;
+          @include centerFlex();
+          // img {
+          //   width: 100%;
+          //   object-fit: contain;
+          // }
+        }
+        &:hover {
+          box-shadow: $shadow;
+        }
+      }
+    }
   }
   .recent_bolgs {
-    padding: 0 16px 60px;
+    padding: 60px 16px;
     h2 {
       font-size: 20px;
       font-weight: 600;
@@ -961,6 +1035,35 @@ main {
             }
           }
         }
+      }
+    }
+  }
+  .features {
+    padding: 40px 16px;
+    background: $light_bg;
+    .feature {
+      background: $white;
+      box-shadow: $shadow;
+      padding: 24px;
+      border-radius: 8px;
+      @include centerFlex();
+      flex-direction: column;
+      gap: 12px;
+      img {
+        height: 48px;
+      }
+      h5 {
+        font-size: 16px;
+        color: $main;
+        margin: 0;
+        text-align: center;
+        font-weight: 600;
+      }
+      p {
+        font-size: 12px;
+        color: $text;
+        text-align: center;
+        line-height: 22px;
       }
     }
   }
@@ -1246,8 +1349,8 @@ main {
 }
 footer {
   width: 100%;
-  padding: 60px 16px 40px;
-  border-top: 1px solid $border;
+  padding: 40px 16px;
+  border-top: 1px solid $light_bg;
   .about_company {
     display: flex;
     flex-direction: column;

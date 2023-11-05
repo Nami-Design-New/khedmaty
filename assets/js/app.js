@@ -107,3 +107,18 @@ inputs.forEach(input => {
   input.addEventListener('focus', highlight);
   input.addEventListener('blur', dehighlight);
 });
+// nav-links highlight by getting path name
+const { pathname } = window.location;
+let navLinks = document.querySelectorAll(".navigation_links a");
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].classList.remove("active");
+}
+for (let i = 0; i < navLinks.length; i++) {
+  const linkPathname = new URL(navLinks[i].href).pathname;
+  if (linkPathname === pathname) {
+    navLinks[i].classList.add("active");
+  }
+  if (pathname === "/") {
+    navLinks[0].classList.add("active");
+  }
+}
