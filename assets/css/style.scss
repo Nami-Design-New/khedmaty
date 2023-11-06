@@ -33,7 +33,8 @@ p {
 }
 $main: #000000;
 $second: #fc6240;
-$second10: #fc63401a;
+$second20: #fee0d9;
+$second5: #fff7f5;
 $white: #ffffff;
 $text: #999999;
 $stroke: #f4f4f4;
@@ -851,7 +852,7 @@ main {
   }
   .stores {
     padding: 60px 16px;
-    background: $second10;
+    background: $second5;
     .section_head {
       h3 {
         font-size: 16px;
@@ -1249,7 +1250,7 @@ main {
   .testimonials {
     width: 100%;
     padding: 60px 16px;
-    background: $second10;
+    background: $second5;
     h2 {
       font-size: 20px;
       color: $main;
@@ -1402,8 +1403,100 @@ main {
       }
     }
   }
+  .categories-section {
+    padding: 20px 12px;
+  }
   .shop_section {
     padding: 20px 16px;
+    .store_banner {
+      position: relative;
+      padding: 12px;
+      height: 120px;
+      background: $second20;
+      border-radius: 12px;
+      display: flex;
+      gap: 24px;
+      margin-bottom: 20px;
+      @media (max-width: 576px) {
+        flex-direction: column;
+        height: initial;
+        justify-content: center;
+        gap: 12px;
+      }
+      .store_brand {
+        @include centerFlex();
+        img {
+          max-height: 85%;
+          @media (max-width: 576px) {
+            max-height: 100px;
+            height: 100px;
+          }
+        }
+      }
+      .store_info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        @media (max-width: 576px) {
+          align-items: center;
+        }
+        gap: 2px;
+        h3 {
+          margin: 0;
+          font-size: 18px;
+          color: $main;
+          font-weight: 600;
+        }
+        p {
+          font-size: 12px;
+          line-height: 26px;
+          margin-bottom: 0;
+          i {
+            color: $second;
+          }
+        }
+        .rate {
+          display: flex;
+          @include clearInput();
+          gap: 16px;
+          align-items: center;
+          h6 {
+            font-size: 12px;
+            color: $second;
+            margin: 0;
+          }
+          ul {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            li {
+              line-height: 26px;
+            }
+            i {
+              font-size: 12px;
+              color: #aaaaaa;
+              &.fulls {
+                color: gold;
+              }
+            }
+          }
+        }
+      }
+      .save {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        @include clearInput();
+        i {
+          color: $main;
+          font-size: 18px;
+        }
+        &.active i {
+          color: gold;
+          font-weight: 600;
+        }
+      }
+    }
     .filter-wrap {
       padding-left: 8px;
       .colse {
@@ -1479,6 +1572,19 @@ main {
                 }
               }
             }
+          }
+        }
+        .save_filter {
+          @include clearInput();
+          width: 100%;
+          padding: 8px;
+          background: $main;
+          color: $white;
+          font-size: 14px;
+          border-radius: 4px;
+          transition: $transition;
+          &:hover {
+            background: $second;
           }
         }
       }
@@ -1559,6 +1665,320 @@ main {
       }
       @media (max-width: 768px) {
         display: flex;
+      }
+    }
+  }
+  .blog_details__section {
+    padding: 40px 16px;
+    @media (max-width: 576px) {
+      padding: 20px 16px;
+    }
+    .row {
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
+    }
+    .blog_img {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: $shadow;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+    .blog_content {
+      h3 {
+        font-size: 26px;
+        color: $main;
+        font-weight: 600;
+        margin-bottom: 32px;
+        @media (max-width: 576px) {
+          font-size: 20px;
+          margin-bottom: 24px;
+        }
+      }
+      p {
+        font-size: 12px;
+        color: $text;
+        line-height: 24px;
+        margin-bottom: 24px;
+      }
+      .share_blog {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        h6 {
+          color: $main;
+          font-size: 14px;
+          font-weight: 600;
+        }
+        .social_share {
+          display: flex;
+          gap: 8px;
+          a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: $main;
+            @include centerFlex();
+            i {
+              margin: 0;
+              transition: $transition;
+              font-size: 16px;
+            }
+            &:hover {
+              background: $second;
+              color: $second;
+              i {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .products_details__section {
+    padding: 40px 16px;
+    .product_img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      @include centerFlex();
+      flex-direction: column;
+      img {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+      }
+      .store_banner {
+        box-shadow: $shadow;
+        position: relative;
+        padding: 12px;
+        border-radius: 12px;
+        display: flex;
+        gap: 16px;
+        .store_brand {
+          @include centerFlex();
+          img {
+            max-height: 100%;
+          }
+        }
+        .store_info {
+          display: flex;
+          justify-content: end;
+          flex-direction: column;
+          gap: 2px;
+          h3 {
+            margin: 0;
+            font-size: 18px;
+            color: $main;
+            font-weight: 600;
+          }
+          p {
+            font-size: 12px;
+            line-height: 26px;
+            margin-bottom: 0;
+            i {
+              color: $second;
+            }
+          }
+          .rate {
+            display: flex;
+            @include clearInput();
+            gap: 16px;
+            align-items: center;
+            h6 {
+              font-size: 12px;
+              color: $second;
+              margin: 0;
+            }
+            ul {
+              display: flex;
+              gap: 4px;
+              align-items: center;
+              li {
+                line-height: 26px;
+              }
+              i {
+                font-size: 12px;
+                color: #aaaaaa;
+                &.fulls {
+                  color: gold;
+                }
+              }
+            }
+          }
+        }
+        .save {
+          position: absolute;
+          top: 16px;
+          left: 16px;
+          @include clearInput();
+          i {
+            color: $main;
+            font-size: 18px;
+          }
+          &.active i {
+            color: gold;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .product_info {
+      .pro_label {
+        position: relative;
+        background: $second5;
+        padding: 32px 16px;
+        display: flex;
+        border-radius: 12px;
+        flex-direction: column;
+        gap: 8px;
+        .addFav {
+          position: absolute;
+          top: 16px;
+          left: 16px;
+          outline: none;
+          border: none;
+          background: $white;
+          width: 45px;
+          height: 45px;
+          @include centerFlex();
+          transition: $transition;
+          border-radius: 50%;
+          &.active i {
+            color: $second;
+          }
+        }
+        .addToCart {
+          width: 100%;
+          display: flex;
+          gap: 32px;
+          padding: 8px 0;
+          button {
+            @include clearInput();
+            width: 70px;
+            height: 45px;
+            background: $white;
+            border-radius: 4px;
+            i {
+              color: $second;
+            }
+          }
+          .count {
+            width: 100%;
+            background: $white;
+            display: flex;
+            border-radius: 4px;
+            input {
+              flex: 4;
+              outline: none;
+              background: $white;
+              text-align: center;
+              border: 0;
+              border-right: 1px solid $border;
+              border-left: 1px solid $border;
+              &::-webkit-inner-spin-button {
+                display: none;
+              }
+            }
+            button {
+              flex: 1;
+            }
+          }
+        }
+        h5 {
+          font-size: 14px;
+          color: $main;
+          line-height: 28px;
+          font-weight: 600;
+          margin: 0;
+          @include space-between();
+          .price {
+            display: flex;
+            gap: 12px;
+            line-height: normal;
+            small {
+              color: $text;
+              font-size: 10px;
+              text-decoration: line-through;
+              font-weight: 400;
+            }
+            strong {
+              color: $second;
+              font-size: 16px;
+            }
+          }
+        }
+        p {
+          color: $text;
+          font-size: 12px;
+          line-height: 24px;
+          span {
+            line-height: normal;
+          }
+          .status {
+            color: #00a64f;
+          }
+          .num {
+            color: $second;
+          }
+        }
+        .table_header {
+          margin-top: 8px;
+          width: 100%;
+          height: 40px;
+          background: $second20;
+          border-radius: 8px 8px 0 0;
+          display: flex;
+          .cell {
+            flex: 1;
+            border-left: 1px solid $border;
+            @include centerFlex();
+            &:last-child {
+              border: 0;
+            }
+            h6 {
+              margin: 0;
+              font-size: 12px;
+              color: $main;
+            }
+          }
+        }
+        .table_row {
+          width: 100%;
+          background: $white;
+          display: flex;
+          .cell {
+            padding: 12px 0;
+            flex: 1;
+            border-left: 1px solid $border;
+            @include centerFlex();
+            &:last-child {
+              border: 0;
+            }
+            h6 {
+              margin: 0;
+              font-size: 12px;
+              color: $main;
+            }
+          }
+        }
+      }
+      .description {
+        margin-top: 16px;
+        p {
+          font-size: 12px;
+          color: $text;
+          line-height: 22px;
+        }
       }
     }
   }
@@ -1722,6 +2142,84 @@ footer {
           font-size: 14px;
           &:hover {
             color: $second;
+          }
+        }
+      }
+    }
+  }
+}
+#rateModel {
+  .modal-dialog {
+    .modal-header {
+      padding: 30px 30px;
+      border-bottom: 0;
+      .btn-close {
+        box-shadow: none !important;
+      }
+    }
+    .modal-body {
+      padding: 0 30px 30px;
+      .reviews {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        .review {
+          width: 100%;
+          padding: 12px 16px;
+          border-radius: 8px;
+          background: $light_bg;
+          .reviewer {
+            display: flex;
+            gap: 16px;
+            .img {
+              height: 100px;
+              width: 100px;
+              overflow: hidden;
+              border-radius: 8px;
+              img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            .info {
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              h6 {
+                color: $main;
+                font-size: 14px;
+                font-weight: 600;
+              }
+              span {
+                font-size: 10px;
+                color: $text;
+                line-height: 20px;
+              }
+              ul {
+                display: flex;
+                gap: 4px;
+                align-items: center;
+                li {
+                  line-height: 26px;
+                }
+                i {
+                  font-size: 12px;
+                  color: #aaaaaa;
+                  &.fulls {
+                    color: gold;
+                  }
+                }
+              }
+            }
+          }
+          p {
+            margin-top: 16px;
+            line-height: 22px;
+            color: $main;
+            font-size: 12px;
+            font-style: italic;
           }
         }
       }
@@ -1925,7 +2423,7 @@ footer {
     width: 100%;
     @include centerFlex();
     img {
-      width: 30%;
+      height: 64px;
       object-fit: contain;
     }
   }
