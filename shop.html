@@ -812,6 +812,17 @@
     <!-- JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+        let openFilter = document.querySelector('.openfilter');
+        let sideMenu = document.querySelector(".side-menu");
+        let close = document.querySelector(".colse");
+        openFilter.addEventListener('click', () => {
+            sideMenu.classList.add("active");
+        })
+        close.addEventListener('click', () => {
+            sideMenu.classList.remove("active");
+        })
+    </script>
 </body>
 
 </html>

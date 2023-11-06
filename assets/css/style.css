@@ -1545,7 +1545,7 @@ main .shop_section .filter-wrap form .accordion-body ul li input:checked::before
   border-color: #fc6240;
   background: #fc6240;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   main .shop_section aside {
     display: none;
   }
@@ -1556,22 +1556,23 @@ main .shop_section .filter-wrap form .accordion-body ul li input:checked::before
   }
   main .shop_section aside .colse i {
     font-size: 24px;
-    color: var(--black-color);
+    color: #000000;
   }
   main .shop_section aside.side-menu {
     display: block;
     position: fixed;
-    top: 80px;
+    top: 100%;
+    z-index: 9999;
     overflow-y: scroll;
     width: 100%;
-    background: var(--white-color);
-    left: -100%;
-    transition: var(--main-transation);
-    height: calc(100vh - 80px);
-    padding: 32px 24px;
+    background: #ffffff;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    height: 100vh;
+    padding: 32px 24px !important;
   }
   main .shop_section aside.active {
-    left: 0;
+    top: 0;
   }
 }
 main .shop_section .inner_search__form {
