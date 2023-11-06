@@ -834,21 +834,6 @@ main {
         height: 60px;
       }
     }
-    .rendered_products {
-      display: flex;
-      padding: 16px 12px;
-      overflow-x: auto;
-      scroll-snap-align: start;
-      scroll-snap-type: x mandatory;
-      gap: 16px;
-      overflow-y: hidden;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      .product_crad {
-        min-width: 268px;
-      }
-    }
   }
   .stores {
     padding: 60px 16px;
@@ -1878,7 +1863,7 @@ main {
             display: flex;
             border-radius: 4px;
             input {
-              flex: 4;
+              flex: 3;
               outline: none;
               background: $white;
               text-align: center;
@@ -1888,9 +1873,13 @@ main {
               &::-webkit-inner-spin-button {
                 display: none;
               }
+              @media (max-width: 576px) {
+                max-width: 100px;
+              }
             }
             button {
               flex: 1;
+              width: initial;
             }
           }
         }
@@ -1980,6 +1969,12 @@ main {
           line-height: 22px;
         }
       }
+    }
+    .semilar_pros {
+      font-size: 16px;
+      padding: 12px;
+      color: $main;
+      font-weight: 600;
     }
   }
 }
@@ -2433,5 +2428,20 @@ footer {
   &.store_page {
     background: $light_bg;
     min-width: initial;
+  }
+}
+.rendered_products {
+  display: flex;
+  padding: 16px 12px;
+  overflow-x: auto;
+  scroll-snap-align: start;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  overflow-y: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .product_crad {
+    min-width: 268px;
   }
 }

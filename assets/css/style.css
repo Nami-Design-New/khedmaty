@@ -852,21 +852,6 @@ main .store_section .section_tabs ul li:hover, main .store_section .section_tabs
 main .store_section .section_tabs.services {
   height: 60px;
 }
-main .store_section .rendered_products {
-  display: flex;
-  padding: 16px 12px;
-  overflow-x: auto;
-  scroll-snap-align: start;
-  scroll-snap-type: x mandatory;
-  gap: 16px;
-  overflow-y: hidden;
-}
-main .store_section .rendered_products::-webkit-scrollbar {
-  display: none;
-}
-main .store_section .rendered_products .product_crad {
-  min-width: 268px;
-}
 main .stores {
   padding: 60px 16px;
   background: #fff7f5;
@@ -1981,7 +1966,7 @@ main .products_details__section .product_info .pro_label .addToCart .count {
   border-radius: 4px;
 }
 main .products_details__section .product_info .pro_label .addToCart .count input {
-  flex: 4;
+  flex: 3;
   outline: none;
   background: #ffffff;
   text-align: center;
@@ -1992,8 +1977,14 @@ main .products_details__section .product_info .pro_label .addToCart .count input
 main .products_details__section .product_info .pro_label .addToCart .count input::-webkit-inner-spin-button {
   display: none;
 }
+@media (max-width: 576px) {
+  main .products_details__section .product_info .pro_label .addToCart .count input {
+    max-width: 100px;
+  }
+}
 main .products_details__section .product_info .pro_label .addToCart .count button {
   flex: 1;
+  width: initial;
 }
 main .products_details__section .product_info .pro_label h5 {
   font-size: 14px;
@@ -2085,6 +2076,12 @@ main .products_details__section .product_info .description p {
   font-size: 12px;
   color: #999999;
   line-height: 22px;
+}
+main .products_details__section .semilar_pros {
+  font-size: 16px;
+  padding: 12px;
+  color: #000000;
+  font-weight: 600;
 }
 
 footer {
@@ -2562,4 +2559,20 @@ footer .copy_pay .payments ul img {
 .store_card.store_page {
   background: #fafafa;
   min-width: initial;
+}
+
+.rendered_products {
+  display: flex;
+  padding: 16px 12px;
+  overflow-x: auto;
+  scroll-snap-align: start;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  overflow-y: hidden;
+}
+.rendered_products::-webkit-scrollbar {
+  display: none;
+}
+.rendered_products .product_crad {
+  min-width: 268px;
 }/*# sourceMappingURL=style.css.map */
