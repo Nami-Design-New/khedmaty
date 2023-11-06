@@ -122,3 +122,28 @@ for (let i = 0; i < navLinks.length; i++) {
     navLinks[0].classList.add("active");
   }
 }
+// testimonials slider
+var swiper = new Swiper(".testimonilasSwiper", {
+  loop: true,
+  spaceBetween: 30,
+  speed: 2000,
+  centeredSlides: true,
+  pagination: {
+    el: ".testimonialsSwiperPagination",
+    clickable: true
+  },
+  autoplay: {
+    delay: 4000
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 3
+    },
+    768: {
+      slidesPerView: 2
+    },
+    350: {
+      slidesPerView: 1
+    }
+  }
+});

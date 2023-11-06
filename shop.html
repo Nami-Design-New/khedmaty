@@ -74,7 +74,7 @@
             <div class="navigation_links">
                 <ul>
                     <li><a class="nav-link active" href="index.html">الرئيسية</a></li>
-                    <li><a class="nav-link" href="shop.html">المتجر</a></li>
+                    <li><a class="nav-link" href="stores.html">المتاجر</a></li>
                     <li><a class="nav-link" href="about-us.html">نبذه عنا</a></li>
                     <li><a class="nav-link" href="blogs.html">المدونات</a></li>
                     <li><a class="nav-link" href="contact-us.html">تواصل معنا</a></li>
@@ -91,7 +91,7 @@
                         aria-expanded="false">
                         <i class="fa-regular fa-user"></i>
                     </a>
-                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <li>
                             <a class="dropdown-item" href="auth-login.html">تسجيل الدخول</a>
                         </li>
@@ -102,7 +102,7 @@
                             <a class="dropdown-item" href="profile.html">الملف الشخصى</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">تسجيل الخروج</a>
+                            <a class="dropdown-item" href="auth-login.html">تسجيل الخروج</a>
                         </li>
                     </ul>
                 </div>
@@ -138,12 +138,438 @@
             <h6>
                 <a href="index.html">الرئيسية</a>
                 <i class="fa-regular fa-angle-left"></i>
-                تواصل معنا
+                <!-- متجر <span>الوعلان للتجارة</span> -->
+                المتجر
             </h6>
         </div>
-        <!-- contact-us section -->
-        <section class="contact-us">
-
+        <!-- shop section -->
+        <section class="shop_section">
+            <div class="container">
+                <div class="row">
+                    <!-- responsive open filter -->
+                    <div class="small-filter-header">
+                        <h6>نتائج البحث</h6>
+                        <button class="openfilter">
+                            <i class="fa-light fa-sliders"></i>
+                        </button>
+                    </div>
+                    <!-- filter menu -->
+                    <aside class="col-lg-3 pt-3 pe-lg-3 pe-0 side-menu">
+                        <div class="filter-wrap">
+                            <div class="colse">
+                                <i class="fa-light fa-xmark"></i>
+                            </div>
+                            <form action="">
+                                <div class="accordion" id="filterAccordion">
+                                    <!-- categories Level -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                القسم
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne" data-bs-parent="#filterAccordion">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li>
+                                                        <label for="bumber" class="field_name">
+                                                            <img src="assets/images/bumper.png" alt="bumber">
+                                                            <h6>الصدامات، الشبوك والواجهة</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="category" id="bumber">
+                                                    </li>
+                                                    <li>
+                                                        <label for="engine" class="field_name">
+                                                            <img src="assets/images/engine.png" alt="engine">
+                                                            <h6>المكائن، القيرات وملحقاتها</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="category" id="engine">
+                                                    </li>
+                                                    <li>
+                                                        <label for="aids" class="field_name">
+                                                            <img src="assets/images/aids.png" alt="aids">
+                                                            <h6>المساعدات، المقصات</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="category" id="aids">
+                                                    </li>
+                                                    <li>
+                                                        <label for="filters" class="field_name">
+                                                            <img src="assets/images/filters.png" alt="filters">
+                                                            <h6>البواجي، الفلاتر والسيور</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="category" id="filters">
+                                                    </li>
+                                                    <li>
+                                                        <label for="disk" class="field_name">
+                                                            <img src="assets/images/disk.png" alt="disk">
+                                                            <h6>الفرامل والأقمشة</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="category" id="disk">
+                                                    </li>
+                                                    <li>
+                                                        <label for="aircondition" class="field_name">
+                                                            <img src="assets/images/aircondition.png"
+                                                                alt="aircondition">
+                                                            <h6>نظام التكييف والتبريد</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="category" id="aircondition">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- brand level -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                الماركة
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="headingTwo" data-bs-parent="#filterAccordion">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li>
+                                                        <label for="bmw" class="field_name">
+                                                            <img src="assets/images/bmw.png" alt="bmw">
+                                                            <h6>BMW</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="brand" id="bmw">
+                                                    </li>
+                                                    <li>
+                                                        <label for="honda" class="field_name">
+                                                            <img src="assets/images/honda.png" alt="honda">
+                                                            <h6>هوندا</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="brand" id="honda">
+                                                    </li>
+                                                    <li>
+                                                        <label for="mazda" class="field_name">
+                                                            <img src="assets/images/mazda.png" alt="mazda">
+                                                            <h6>مازدا</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="brand" id="mazda">
+                                                    </li>
+                                                    <li>
+                                                        <label for="toyota" class="field_name">
+                                                            <img src="assets/images/toyota.png" alt="toyota">
+                                                            <h6>تويوتا</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="brand" id="toyota">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- model level -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                الموديل
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="headingThree" data-bs-parent="#filterAccordion">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li>
+                                                        <label for="Camry" class="field_name">
+                                                            <h6>كامري</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="model" id="Camry">
+                                                    </li>
+                                                    <li>
+                                                        <label for="Corolla" class="field_name">
+                                                            <h6>كورولا</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="model" id="Corolla">
+                                                    </li>
+                                                    <li>
+                                                        <label for="Hilux" class="field_name">
+                                                            <h6>هايلكس</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="model" id="Hilux">
+                                                    </li>
+                                                    <li>
+                                                        <label for="Avalon" class="field_name">
+                                                            <h6>افالون</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="model" id="Avalon">
+                                                    </li>
+                                                    <li>
+                                                        <label for="Supra" class="field_name">
+                                                            <h6>سوبرا</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="model" id="Supra">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- manufacturing year -->
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFour">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour">
+                                                سنة الصنع
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            aria-labelledby="headingFour" data-bs-parent="#filterAccordion">
+                                            <div class="accordion-body">
+                                                <ul>
+                                                    <li>
+                                                        <label for="2023" class="field_name">
+                                                            <h6>2023</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="manufacturing-year" id="2023">
+                                                    </li>
+                                                    <li>
+                                                        <label for="2022" class="field_name">
+                                                            <h6>2022</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="manufacturing-year" id="2022">
+                                                    </li>
+                                                    <li>
+                                                        <label for="2021" class="field_name">
+                                                            <h6>2021</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="manufacturing-year" id="2021">
+                                                    </li>
+                                                    <li>
+                                                        <label for="2020" class="field_name">
+                                                            <h6>2020</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="manufacturing-year" id="2020">
+                                                    </li>
+                                                    <li>
+                                                        <label for="2019" class="field_name">
+                                                            <h6>2019</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="manufacturing-year" id="2019">
+                                                    </li>
+                                                    <li>
+                                                        <label for="2018" class="field_name">
+                                                            <h6>2018</h6>
+                                                        </label>
+                                                        <input type="checkbox" name="manufacturing-year" id="2018">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </aside>
+                    <!-- products Wrapper -->
+                    <div class="col-lg-9 col-12 p-2">
+                        <div class="container p-0">
+                            <div class="row">
+                                <div class="col-12 p-lg-2 p-1">
+                                    <form action="" class="inner_search__form">
+                                        <input type="text" placeholder="تبحث عن شئ ... ؟">
+                                    </form>
+                                </div>
+                                <div class="col-lg-4 col-6 p-lg-2 p-1">
+                                    <div class="product_crad">
+                                        <div class="product_image">
+                                            <img src="assets/images/pro1.jpg" alt="product">
+                                            <span>أوريون</span>
+                                        </div>
+                                        <div class="product_info">
+                                            <h5 class="pro_name"
+                                                title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
+                                                <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
+                                            </h5>
+                                            <p class="pro_number">NO: 6287019946008</p>
+                                            <p class="trader">تاجر الرياض - 815</p>
+                                            <div class="price_buy">
+                                                <h6>180 ريال</h6>
+                                                <button>
+                                                    <i class="fa-regular fa-cart-shopping-fast"></i>
+                                                </button>
+                                            </div>
+                                            <div class="rate_sale">
+                                                <p>
+                                                    <span class="old_price">400 ريال</span>
+                                                    <span class="sale">خصم 49.07%</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-6 p-lg-2 p-1">
+                                    <div class="product_crad">
+                                        <div class="product_image">
+                                            <img src="assets/images/pro2.jpg" alt="product">
+                                            <span>أوريون</span>
+                                        </div>
+                                        <div class="product_info">
+                                            <h5 class="pro_name"
+                                                title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
+                                                <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
+                                            </h5>
+                                            <p class="pro_number">NO: 6287019946008</p>
+                                            <p class="trader">تاجر الرياض - 815</p>
+                                            <div class="price_buy">
+                                                <h6>180 ريال</h6>
+                                                <button>
+                                                    <i class="fa-regular fa-cart-shopping-fast"></i>
+                                                </button>
+                                            </div>
+                                            <div class="rate_sale">
+                                                <p>
+                                                    <span class="old_price">400 ريال</span>
+                                                    <span class="sale">خصم 49.07%</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-6 p-lg-2 p-1">
+                                    <div class="product_crad">
+                                        <div class="product_image">
+                                            <img src="assets/images/pro3.jpg" alt="product">
+                                            <span>أوريون</span>
+                                        </div>
+                                        <div class="product_info">
+                                            <h5 class="pro_name"
+                                                title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
+                                                <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
+                                            </h5>
+                                            <p class="pro_number">NO: 6287019946008</p>
+                                            <p class="trader">تاجر الرياض - 815</p>
+                                            <div class="price_buy">
+                                                <h6>180 ريال</h6>
+                                                <button>
+                                                    <i class="fa-regular fa-cart-shopping-fast"></i>
+                                                </button>
+                                            </div>
+                                            <div class="rate_sale">
+                                                <p>
+                                                    <span class="old_price">400 ريال</span>
+                                                    <span class="sale">خصم 49.07%</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-6 p-lg-2 p-1">
+                                    <div class="product_crad">
+                                        <div class="product_image">
+                                            <img src="assets/images/pro4.jpg" alt="product">
+                                            <span>أوريون</span>
+                                        </div>
+                                        <div class="product_info">
+                                            <h5 class="pro_name"
+                                                title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
+                                                <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
+                                            </h5>
+                                            <p class="pro_number">NO: 6287019946008</p>
+                                            <p class="trader">تاجر الرياض - 815</p>
+                                            <div class="price_buy">
+                                                <h6>180 ريال</h6>
+                                                <button>
+                                                    <i class="fa-regular fa-cart-shopping-fast"></i>
+                                                </button>
+                                            </div>
+                                            <div class="rate_sale">
+                                                <p>
+                                                    <span class="old_price">400 ريال</span>
+                                                    <span class="sale">خصم 49.07%</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-6 p-lg-2 p-1">
+                                    <div class="product_crad">
+                                        <div class="product_image">
+                                            <img src="assets/images/pro1.jpg" alt="product">
+                                            <span>أوريون</span>
+                                        </div>
+                                        <div class="product_info">
+                                            <h5 class="pro_name"
+                                                title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
+                                                <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
+                                            </h5>
+                                            <p class="pro_number">NO: 6287019946008</p>
+                                            <p class="trader">تاجر الرياض - 815</p>
+                                            <div class="price_buy">
+                                                <h6>180 ريال</h6>
+                                                <button>
+                                                    <i class="fa-regular fa-cart-shopping-fast"></i>
+                                                </button>
+                                            </div>
+                                            <div class="rate_sale">
+                                                <p>
+                                                    <span class="old_price">400 ريال</span>
+                                                    <span class="sale">خصم 49.07%</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-6 p-lg-2 p-1">
+                                    <div class="product_crad">
+                                        <div class="product_image">
+                                            <img src="assets/images/pro3.jpg" alt="product">
+                                            <span>أوريون</span>
+                                        </div>
+                                        <div class="product_info">
+                                            <h5 class="pro_name"
+                                                title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
+                                                <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
+                                            </h5>
+                                            <p class="pro_number">NO: 6287019946008</p>
+                                            <p class="trader">تاجر الرياض - 815</p>
+                                            <div class="price_buy">
+                                                <h6>180 ريال</h6>
+                                                <button>
+                                                    <i class="fa-regular fa-cart-shopping-fast"></i>
+                                                </button>
+                                            </div>
+                                            <div class="rate_sale">
+                                                <p>
+                                                    <span class="old_price">400 ريال</span>
+                                                    <span class="sale">خصم 49.07%</span>
+                                                </p>
+                                                <a href="#!">
+                                                    <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <!-- footer -->
