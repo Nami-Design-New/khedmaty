@@ -74,10 +74,10 @@
             <div class="navigation_links">
                 <ul>
                     <li><a class="nav-link active" href="index.html">الرئيسية</a></li>
-                    <li><a class="nav-link" href="stores.html">المتاجر</a></li>
+                    <li><a class="nav-link" href="currentOrders.html">المتاجر</a></li>
                     <li><a class="nav-link" href="about-us.html">نبذه عنا</a></li>
                     <li><a class="nav-link" href="blogs.html">المدونات</a></li>
-                    <li><a class="nav-link" href="contact-us.html">تواصل معنا</a></li>
+                    <li><a class="nav-link" href="previousOrders-us.html">تواصل معنا</a></li>
                 </ul>
             </div>
             <div class="search">
@@ -99,7 +99,7 @@
                             <a class="dropdown-item" href="auth-regiester.html">إنشاء حساب</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="profile.html">الملف الشخصى</a>
+                            <a class="dropdown-item" href="previousOrders.html">الملف الشخصى</a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="auth-login.html">تسجيل الخروج</a>
@@ -138,61 +138,234 @@
             <h6>
                 <a href="index.html">الرئيسية</a>
                 <i class="fa-regular fa-angle-left"></i>
-                المتاجر
+                طلباتي
             </h6>
         </div>
-        <!-- stores section -->
-        <section class="stores-section">
+        <!-- orders_section -->
+        <div class="orders_section">
             <div class="container">
-                <div class="row">
-                    <div class="col-12 mb-3">
-                        <form action="">
-                            <input type="text" placeholder="تبحث عن متجر .. ؟">
-                        </form>
-                    </div>
-                    <div class="col-lg-3 col-6 p-2">
-                        <a href="shop.html" class="store_card store_page">
-                            <div class="logo">
-                                <img src="assets/images/partener1.png" alt="partener">
+                <ul class="nav saved_items_tabs nav-pills mb-3" id="pills-tab" role="tablist">
+                    <!-- currentOrders tab btn -->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-currentOrders-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-currentOrders" type="button" role="tab"
+                            aria-controls="pills-currentOrders" aria-selected="true">
+                            الحالية
+                        </button>
+                    </li>
+                    <!-- previousOrders tab btn -->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-previousOrders-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-previousOrders" type="button" role="tab"
+                            aria-controls="pills-previousOrders" aria-selected="false">
+                            السابقة
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- currentOrders tab -->
+                    <div class="tab-pane fade show active" id="pills-currentOrders" role="tabpanel"
+                        aria-labelledby="pills-currentOrders-tab">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="order_card">
+                                    <div class="title">
+                                        <p>#8978</p>
+                                        <a href="order-details.html">التفاصيل</a>
+                                    </div>
+                                    <div class="time">
+                                        <p>
+                                            <i class="fa-light fa-calendar-lines"></i>
+                                            <span>2023-06-16</span>
+                                        </p>
+                                        <p>
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>09:16</span>
+                                        </p>
+                                    </div>
+                                    <div class="location">
+                                        <p> <i class="fa-light fa-map-pin"></i> <span>الرياض , شارع نعيم بن حمد</span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <h6>الوعلان للتجارة</h6>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-6 p-2">
-                        <a href="shop.html" class="store_card store_page">
-                            <div class="logo">
-                                <img src="assets/images/partener2.png" alt="partener">
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="order_card">
+                                    <div class="title">
+                                        <p>#8978</p>
+                                        <a href="order-details.html">التفاصيل</a>
+                                    </div>
+                                    <div class="time">
+                                        <p>
+                                            <i class="fa-light fa-calendar-lines"></i>
+                                            <span>2023-06-16</span>
+                                        </p>
+                                        <p>
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>09:16</span>
+                                        </p>
+                                    </div>
+                                    <div class="location">
+                                        <p> <i class="fa-light fa-map-pin"></i> <span>الرياض , شارع نعيم بن حمد</span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <h6>السلمي للمحركات</h6>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-6 p-2">
-                        <a href="shop.html" class="store_card store_page">
-                            <div class="logo">
-                                <img src="assets/images/partener3.png" alt="partener">
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="order_card">
+                                    <div class="title">
+                                        <p>#8978</p>
+                                        <a href="order-details.html">التفاصيل</a>
+                                    </div>
+                                    <div class="time">
+                                        <p>
+                                            <i class="fa-light fa-calendar-lines"></i>
+                                            <span>2023-06-16</span>
+                                        </p>
+                                        <p>
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>09:16</span>
+                                        </p>
+                                    </div>
+                                    <div class="location">
+                                        <p> <i class="fa-light fa-map-pin"></i> <span>الرياض , شارع نعيم بن حمد</span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <h6>HYUNDIA</h6>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-6 p-2">
-                        <a href="shop.html" class="store_card store_page">
-                            <div class="logo">
-                                <img src="assets/images/partener4.png" alt="partener">
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="order_card">
+                                    <div class="title">
+                                        <p>#8978</p>
+                                        <a href="order-details.html">التفاصيل</a>
+                                    </div>
+                                    <div class="time">
+                                        <p>
+                                            <i class="fa-light fa-calendar-lines"></i>
+                                            <span>2023-06-16</span>
+                                        </p>
+                                        <p>
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>09:16</span>
+                                        </p>
+                                    </div>
+                                    <div class="location">
+                                        <p> <i class="fa-light fa-map-pin"></i> <span>الرياض , شارع نعيم بن حمد</span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <h6>المجدوعي</h6>
-                        </a>
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-6 p-2">
-                        <a href="shop.html" class="store_card store_page">
-                            <div class="logo">
-                                <img src="assets/images/bmw.png" alt="partener">
+                    <!-- previous orders tab -->
+                    <div class="tab-pane fade" id="pills-previousOrders" role="tabpanel"
+                        aria-labelledby="pills-previousOrders-tab">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="order_card">
+                                    <div class="title">
+                                        <p>#8978</p>
+                                        <a href="order-details.html">التفاصيل</a>
+                                    </div>
+                                    <div class="time">
+                                        <p>
+                                            <i class="fa-light fa-calendar-lines"></i>
+                                            <span>2023-06-16</span>
+                                        </p>
+                                        <p>
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>09:16</span>
+                                        </p>
+                                    </div>
+                                    <div class="location">
+                                        <p> <i class="fa-light fa-map-pin"></i> <span>الرياض , شارع نعيم بن حمد</span>
+                                        </p>
+                                    </div>
+                                    <div class="status">
+                                        <span>طلب منتهي</span>
+                                    </div>
+                                </div>
                             </div>
-                            <h6>BMW</h6>
-                        </a>
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="order_card">
+                                    <div class="title">
+                                        <p>#8978</p>
+                                        <a href="order-details.html">التفاصيل</a>
+                                    </div>
+                                    <div class="time">
+                                        <p>
+                                            <i class="fa-light fa-calendar-lines"></i>
+                                            <span>2023-06-16</span>
+                                        </p>
+                                        <p>
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>09:16</span>
+                                        </p>
+                                    </div>
+                                    <div class="location">
+                                        <p> <i class="fa-light fa-map-pin"></i> <span>الرياض , شارع نعيم بن حمد</span>
+                                        </p>
+                                    </div>
+                                    <div class="status">
+                                        <span>طلب منتهي</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="order_card">
+                                    <div class="title">
+                                        <p>#8978</p>
+                                        <a href="order-details.html">التفاصيل</a>
+                                    </div>
+                                    <div class="time">
+                                        <p>
+                                            <i class="fa-light fa-calendar-lines"></i>
+                                            <span>2023-06-16</span>
+                                        </p>
+                                        <p>
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>09:16</span>
+                                        </p>
+                                    </div>
+                                    <div class="location">
+                                        <p> <i class="fa-light fa-map-pin"></i> <span>الرياض , شارع نعيم بن حمد</span>
+                                        </p>
+                                    </div>
+                                    <div class="status">
+                                        <span>طلب منتهي</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="order_card">
+                                    <div class="title">
+                                        <p>#8978</p>
+                                        <a href="order-details.html">التفاصيل</a>
+                                    </div>
+                                    <div class="time">
+                                        <p>
+                                            <i class="fa-light fa-calendar-lines"></i>
+                                            <span>2023-06-16</span>
+                                        </p>
+                                        <p>
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>09:16</span>
+                                        </p>
+                                    </div>
+                                    <div class="location">
+                                        <p> <i class="fa-light fa-map-pin"></i> <span>الرياض , شارع نعيم بن حمد</span>
+                                        </p>
+                                    </div>
+                                    <div class="status">
+                                        <span>طلب منتهي</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
     <!-- footer -->
     <footer>
