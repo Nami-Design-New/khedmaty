@@ -138,12 +138,177 @@
             <h6>
                 <a href="index.html">الرئيسية</a>
                 <i class="fa-regular fa-angle-left"></i>
-                تواصل معنا
+                الدفع والتوصيل
             </h6>
         </div>
-        <!-- contact-us section -->
-        <section class="contact-us">
-
+        <!-- checkout section -->
+        <section class="checkout_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12 p-0">
+                        <div class="products">
+                            <div class="product">
+                                <div class="pro_img">
+                                    <img src="assets/images/pro5.png" alt="product">
+                                </div>
+                                <div class="info">
+                                    <h6>بطارية كلورايد جولد - امبير 44 - سالب شمال</h6>
+                                    <div class="count_price">
+                                        <p>الكمية : <span>X3</span></p>
+                                        <p>الاجمالي : <span>36</span> ريال</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="pro_img">
+                                    <img src="assets/images/pro6.png" alt="product">
+                                </div>
+                                <div class="info">
+                                    <h6>طقم لمبات فيليبس ليد HB3/4</h6>
+                                    <div class="count_price">
+                                        <p>الكمية : <span>X2</span></p>
+                                        <p>الاجمالي : <span>48</span> ريال</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="pro_img">
+                                    <img src="assets/images/pro2.jpg" alt="product">
+                                </div>
+                                <div class="info">
+                                    <h6>طقم كشاف تويوتا أوريون</h6>
+                                    <div class="count_price">
+                                        <p>الكمية : <span>X4</span></p>
+                                        <p>الاجمالي : <span>1848</span> ريال</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="reciept">
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa-light fa-map-pin"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span>عنوان التوصيل</span>
+                                        <span>الرياض , ابي بكر الرازي</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa-solid fa-wallet"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span> طريقة الدفع</span>
+                                        <span>كاش</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa-light fa-circle-exclamation"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span>ملاحظات</span>
+                                        <span>لا توجد ملاحظات</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa-light fa-calendar-days"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span>موعد الاستلام</span>
+                                        <p><span>2023-08-16</span> - <span>16:30</span></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 p-0">
+                        <div class="btns">
+                            <button class="active">
+                                <i class="fa-light fa-truck-fast"></i> توصيل
+                            </button>
+                            <button>
+                                <i class="fa-regular fa-store"></i> استلام من المتجر
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 p-0">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fa-light fa-map-pin"></i> عنوان التوصيل
+                                    </button>
+                                    <span class="recieve_location">الرياض , ابي بكر الرازي</span>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <input type="text" id="address" name="address" placeholder="عنوان التوصيل">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <i class="fa-solid fa-wallet"></i> طريقة الدفع
+                                    </button>
+                                    <span>كاش</span>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>
+                                                <label for="cach" class="field_name">
+                                                    <h6>كاش</h6>
+                                                </label>
+                                                <input checked type="radio" name="payment_method" id="cach">
+                                            </li>
+                                            <li>
+                                                <label for="apple_pay" class="field_name">
+                                                    <img src="assets/images/method3.svg" alt="">
+                                                    <h6>أبل باى</h6>
+                                                </label>
+                                                <input type="radio" name="payment_method" id="apple_pay">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <i class="fa-light fa-circle-exclamation"></i> ملاحظات
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <textarea name="notice" id="notice"
+                                            placeholder="إكتب ملاحظات على الطلب..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 p-0">
+                        <div class="cart_total">
+                            <p>الإجمالى : <span>260</span> ريال</p>
+                            <a href="checkout.html">إرسال الطلب</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <!-- footer -->
