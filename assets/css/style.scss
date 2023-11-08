@@ -109,7 +109,6 @@ header {
   z-index: 999;
   .offers_bar {
     background: $second;
-    transition: $transition;
     height: 50px;
     width: 100%;
     .container {
@@ -307,6 +306,9 @@ header {
         color: $second;
         line-height: 24px;
         margin: 0;
+        // @media (max-width: 576px) {
+        //   display: none;
+        // }
       }
       .toggler {
         display: none;
@@ -371,6 +373,11 @@ header {
     opacity: 0;
     gap: 16px;
     transition: $transition;
+    &.empty {
+      .inner_cart {
+        justify-content: space-around !important;
+      }
+    }
     p {
       font-size: 14px;
       color: $main;
@@ -381,12 +388,74 @@ header {
       display: flex;
       align-items: center;
       flex-direction: column;
-      justify-content: space-around;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .product {
+        display: flex;
+        padding: 8px 0;
+        gap: 8px;
+        border-bottom: 1px solid $border;
+        &:last-child {
+          border: 0;
+        }
+        .img {
+          min-width: 80px;
+          width: 80px;
+          height: 80px;
+          background: $light_bg;
+          border-radius: 4px;
+          @include centerFlex();
+          img {
+            height: 100%;
+            mix-blend-mode: multiply;
+            object-fit: contain;
+          }
+        }
+        .info {
+          h6 {
+            font-size: 12px;
+            color: $main;
+            line-height: 22px;
+            margin: 0;
+            a {
+              line-height: normal;
+            }
+          }
+          p {
+            font-size: 12px;
+            color: $main;
+            line-height: normal;
+            span {
+              color: $second;
+            }
+          }
+        }
+        .count_delete {
+          @include space-between();
+          p {
+            font-size: 12px;
+            color: $main;
+            line-height: normal;
+            span {
+              color: $second;
+            }
+          }
+          button {
+            @include clearInput();
+            i {
+              color: $second;
+            }
+          }
+        }
+      }
       img {
         height: 60%;
         object-fit: contain;
       }
       .subtotal {
+        padding: 8px 0;
         @include space-between();
         width: 100%;
         p {
@@ -642,6 +711,11 @@ main {
       color: $main;
       position: relative;
       margin-right: 54px;
+      margin-bottom: 0;
+      @media (max-width: 576px) {
+        font-size: 18px;
+        margin-right: 36px;
+      }
       &::after {
         content: '';
         width: 48px;
@@ -650,6 +724,10 @@ main {
         position: absolute;
         right: -54px;
         bottom: 8px;
+        @media (max-width: 576px) {
+          width: 32px;
+          right: -36px;
+        }
       }
     }
     .category {
@@ -776,7 +854,7 @@ main {
     }
   }
   .store_section {
-    padding: 60px 16px;
+    padding: 60px 0;
     .section_head {
       h3 {
         font-size: 16px;
@@ -856,7 +934,7 @@ main {
     }
   }
   .stores {
-    padding: 60px 16px;
+    padding: 60px 0;
     background: $second5;
     .section_head {
       h3 {
@@ -889,6 +967,9 @@ main {
       overflow-y: hidden;
       &::-webkit-scrollbar {
         display: none;
+      }
+      .store_card {
+        min-width: 250px !important;
       }
     }
   }
@@ -1114,6 +1195,25 @@ main {
       font-family: 'montserrat_light', sans-serif;
       color: $text;
     }
+    .banner {
+      width: 100%;
+      height: 60px;
+      background: $light_bg;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px;
+      img {
+        height: 40px;
+      }
+      h6 {
+        color: $main;
+        font-size: 16px;
+        margin: 0;
+        font-weight: 600;
+      }
+    }
     form {
       width: 100%;
       padding: 32px 40px;
@@ -1202,11 +1302,90 @@ main {
         border-radius: 4px;
       }
       .noAccount {
-        font-size: 12px;
+        margin-top: 8px;
+        font-size: 14px;
         color: $main;
         transition: $transition;
         &:hover {
           color: $second;
+        }
+      }
+    }
+  }
+  .otp {
+    padding: 60px 16px;
+    .img {
+      width: 100%;
+      @include centerFlex();
+      img {
+        width: 50%;
+        object-fit: contain;
+        @media (max-width: 768px) {
+          width: 80%;
+        }
+      }
+    }
+    .otp_header {
+      width: 100%;
+      @include centerFlex();
+      padding: 8px 0;
+      p {
+        font-size: 14px;
+        text-align: center;
+        color: $main;
+        span {
+          color: $second;
+        }
+      }
+    }
+    form {
+      width: 80%;
+      margin: 0 auto;
+      @media (max-width: 768px) {
+        padding: 0;
+        width: 100%;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .otp-container {
+        @include space-between();
+        direction: ltr !important;
+        padding: 24px 0;
+        .otp-input {
+          border-radius: 4px;
+          width: 80px;
+          @media (max-width: 576px) {
+            width: 60px;
+          }
+          height: 60px;
+          text-align: center;
+          background: $second5;
+          font-size: 18px;
+          font-weight: bold;
+          color: $second;
+          outline: none;
+          border: 1px solid $second20;
+        }
+      }
+      .resend_code {
+        @include space-between();
+        a {
+          color: $second;
+          font-size: 14px;
+        }
+      }
+      button {
+        width: 100%;
+        @include clearInput();
+        height: 54px;
+        border-radius: 4px;
+        background: $main;
+        color: $white;
+        font-size: 14px;
+        transition: $transition;
+        &:hover {
+          background: $second;
         }
       }
     }
@@ -2297,20 +2476,18 @@ main {
         }
       }
     }
-    .btns {
-      display: flex;
-      align-items: center;
-      margin-bottom: 24px;
+    .nav {
+      width: 100%;
       gap: 16px;
-      button {
-        @include clearInput();
-        width: min(200px, 100%);
-        height: 56px;
+      .nav-link {
+        height: 48px;
+        padding: 8px 24px;
         background: $light_bg;
         transition: $transition;
+        color: $main;
         border-radius: 4px;
         @include centerFlex();
-        font-size: 14px;
+        font-size: 12px;
         gap: 4px;
         &:hover,
         &.active {
@@ -2319,100 +2496,96 @@ main {
         }
       }
     }
-    .accordion-item {
-      border: 0 !important;
-      border-radius: 0 !important;
-      padding-bottom: 24px !important;
-    }
-    .accordion-header {
+    form {
+      padding: 16px 0;
       display: flex;
       flex-direction: column;
-      span {
-        font-size: 11px;
-        color: $text;
-      }
-    }
-    .accordion-button {
-      padding: 0 !important;
-      box-shadow: none !important;
-      font-size: 14px;
-      color: $main;
-      font-weight: 600;
-      gap: 8px;
-      i {
-        font-size: 18px;
-        color: $second;
-      }
-      &::after {
-        content: '\f107';
-        font-family: 'Font Awesome 6 pro';
-        background: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        transform: none;
-      }
-      &:not(.collapsed) {
-        background: none !important;
-        &::after {
-          content: '\f106';
-        }
-      }
-    }
-    .accordion-body {
-      padding: 16px 0;
-      input,
-      textarea {
+      gap: 24px;
+      .input_filed {
         width: 100%;
-        height: 56px;
-        background: $light_bg;
-        outline: none;
-        border: none;
-        border-radius: 4px;
-        padding: 8px 16px;
-        font-size: 12px;
-      }
-      textarea {
-        height: 140px;
-      }
-      ul {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        li {
-          @include space-between();
-          label {
+        gap: 8px;
+        .loc {
+          display: flex;
+          gap: 8px;
+          .text {
             display: flex;
-            align-items: center;
-            cursor: pointer;
-            gap: 8px;
-            img {
-              width: 24px;
+            justify-content: center;
+            flex-direction: column;
+            p {
+              font-size: 14px;
+              color: $main;
+              font-weight: 600;
             }
-            h6 {
-              margin: 0;
+            span {
               font-size: 12px;
+              color: $text;
+              line-height: normal;
             }
           }
-          input {
-            appearance: none;
-            width: 14px;
-            background: none;
-            height: 14px;
-            position: relative;
-            &::before {
-              @include centerAbsolute();
-              content: '';
-              width: 14px;
-              height: 14px;
-              border-radius: 50%;
-              cursor: pointer;
-              border: 1px solid $text;
-              transition: $transition;
+          .icon {
+            padding-top: 6px;
+            i {
+              font-size: 18px;
+              color: $second;
             }
-            &:checked::before {
-              border-color: $second;
-              background: $second;
+          }
+        }
+        input,
+        textarea {
+          width: 100%;
+          height: 56px;
+          background: $light_bg;
+          outline: none;
+          border: none;
+          border-radius: 4px;
+          padding: 8px 16px;
+          font-size: 12px;
+          color: $main;
+        }
+        textarea {
+          height: 140px;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          li {
+            @include space-between();
+            label {
+              display: flex;
+              align-items: center;
+              cursor: pointer;
+              gap: 8px;
+              img {
+                width: 24px;
+              }
+              h6 {
+                margin: 0;
+                font-size: 12px;
+              }
+            }
+            input {
+              appearance: none;
+              width: 14px;
+              background: none;
+              height: 14px;
+              position: relative;
+              &::before {
+                @include centerAbsolute();
+                content: '';
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                cursor: pointer;
+                border: 1px solid $text;
+                transition: $transition;
+              }
+              &:checked::before {
+                border-color: $second;
+                background: $second;
+              }
             }
           }
         }
@@ -2430,7 +2603,9 @@ main {
           color: $second;
         }
       }
-      a {
+      button {
+        outline: none;
+        border: none;
         padding: 8px 48px;
         font-size: 12px;
         background: $main;
@@ -2588,7 +2763,7 @@ main {
       flex-direction: column;
       align-items: center;
       gap: 16px;
-      .filepond-multiple{
+      .filepond-multiple {
         width: 100%;
       }
       .form-group {
@@ -2631,11 +2806,96 @@ main {
       }
     }
   }
+  .faqs {
+    padding: 30px 0;
+    .faqs-content {
+      padding-top: 60px;
+      h3 {
+        font-size: 20px;
+        color: $second;
+        font-weight: 600;
+        margin-bottom: 28px;
+        i {
+          transform: scaleX(-1);
+        }
+      }
+    }
+    .accordion-button {
+      text-align: inherit;
+      color: $main;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 16px 0;
+      &:focus {
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+      &::after {
+        content: '\f107';
+        font-family: 'Font Awesome 6 pro';
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        transform: none;
+      }
+      &:not(.collapsed) {
+        background: none !important;
+        box-shadow: none !important;
+        color: $second;
+        background: none !important;
+        &::after {
+          content: '\f106';
+        }
+      }
+    }
+    .accordion-body {
+      padding: 16px 0 !important;
+    }
+    .accordion-item {
+      border-top: 0 !important;
+      border-right: 0 !important;
+      border-left: 0 !important;
+      border-bottom: 1px solid #eee !important;
+      border-radius: 0 !important;
+      p {
+        font-size: 12px;
+        color: $main;
+      }
+      &:last-child {
+        border-bottom: 0 !important;
+      }
+    }
+  }
+  .terms {
+    padding: 40px 16px;
+    h1 {
+      font-size: 26px;
+      color: $main;
+    }
+    p {
+      font-size: 12px;
+      color: $main;
+      line-height: 24px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      li {
+        h2 {
+          font-size: 18px;
+          color: $second;
+        }
+      }
+    }
+  }
 }
 footer {
   width: 100%;
   padding: 40px 16px;
-  border-top: 1px solid $light_bg;
+  border-top: 1px solid #eee;
   .about_company {
     display: flex;
     flex-direction: column;

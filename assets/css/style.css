@@ -88,7 +88,6 @@ header {
 }
 header .offers_bar {
   background: #fc6240;
-  transition: all 0.3s ease-in-out;
   height: 50px;
   width: 100%;
 }
@@ -368,6 +367,9 @@ header .mini_cart {
   gap: 16px;
   transition: all 0.3s ease-in-out;
 }
+header .mini_cart.empty .inner_cart {
+  justify-content: space-around !important;
+}
 header .mini_cart p {
   font-size: 14px;
   color: #000000;
@@ -378,7 +380,73 @@ header .mini_cart .inner_cart {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  overflow-y: scroll;
+}
+header .mini_cart .inner_cart::-webkit-scrollbar {
+  display: none;
+}
+header .mini_cart .inner_cart .product {
+  display: flex;
+  padding: 8px 0;
+  gap: 8px;
+  border-bottom: 1px solid #eee;
+}
+header .mini_cart .inner_cart .product:last-child {
+  border: 0;
+}
+header .mini_cart .inner_cart .product .img {
+  min-width: 80px;
+  width: 80px;
+  height: 80px;
+  background: #fafafa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .mini_cart .inner_cart .product .img img {
+  height: 100%;
+  mix-blend-mode: multiply;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .mini_cart .inner_cart .product .info h6 {
+  font-size: 12px;
+  color: #000000;
+  line-height: 22px;
+  margin: 0;
+}
+header .mini_cart .inner_cart .product .info h6 a {
+  line-height: normal;
+}
+header .mini_cart .inner_cart .product .info p {
+  font-size: 12px;
+  color: #000000;
+  line-height: normal;
+}
+header .mini_cart .inner_cart .product .info p span {
+  color: #fc6240;
+}
+header .mini_cart .inner_cart .product .count_delete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .mini_cart .inner_cart .product .count_delete p {
+  font-size: 12px;
+  color: #000000;
+  line-height: normal;
+}
+header .mini_cart .inner_cart .product .count_delete p span {
+  color: #fc6240;
+}
+header .mini_cart .inner_cart .product .count_delete button {
+  border: none;
+  background: none;
+  outline: none;
+}
+header .mini_cart .inner_cart .product .count_delete button i {
+  color: #fc6240;
 }
 header .mini_cart .inner_cart img {
   height: 60%;
@@ -386,6 +454,7 @@ header .mini_cart .inner_cart img {
      object-fit: contain;
 }
 header .mini_cart .inner_cart .subtotal {
+  padding: 8px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -670,6 +739,13 @@ main .popular_categories .section_head {
   color: #000000;
   position: relative;
   margin-right: 54px;
+  margin-bottom: 0;
+}
+@media (max-width: 576px) {
+  main .popular_categories .section_head {
+    font-size: 18px;
+    margin-right: 36px;
+  }
 }
 main .popular_categories .section_head::after {
   content: "";
@@ -679,6 +755,12 @@ main .popular_categories .section_head::after {
   position: absolute;
   right: -54px;
   bottom: 8px;
+}
+@media (max-width: 576px) {
+  main .popular_categories .section_head::after {
+    width: 32px;
+    right: -36px;
+  }
 }
 main .popular_categories .category {
   padding: 16px;
@@ -795,7 +877,7 @@ main .advertisement_section .image .layer:hover {
           backdrop-filter: blur(3px);
 }
 main .store_section {
-  padding: 60px 16px;
+  padding: 60px 0;
 }
 main .store_section .section_head h3 {
   font-size: 16px;
@@ -875,7 +957,7 @@ main .store_section .section_tabs.services {
   height: 60px;
 }
 main .stores {
-  padding: 60px 16px;
+  padding: 60px 0;
   background: #fff7f5;
 }
 main .stores .section_head h3 {
@@ -908,6 +990,9 @@ main .stores .stores_cards {
 }
 main .stores .stores_cards::-webkit-scrollbar {
   display: none;
+}
+main .stores .stores_cards .store_card {
+  min-width: 250px !important;
 }
 main .recent_bolgs {
   padding: 60px 16px;
@@ -1156,6 +1241,25 @@ main .auth .auth-subhead {
   font-family: "montserrat_light", sans-serif;
   color: #999999;
 }
+main .auth .banner {
+  width: 100%;
+  height: 60px;
+  background: #fafafa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+}
+main .auth .banner img {
+  height: 40px;
+}
+main .auth .banner h6 {
+  color: #000000;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+}
 main .auth form {
   width: 100%;
   padding: 32px 40px;
@@ -1256,12 +1360,108 @@ main .auth form .google-login {
   border-radius: 4px;
 }
 main .auth form .noAccount {
-  font-size: 12px;
+  margin-top: 8px;
+  font-size: 14px;
   color: #000000;
   transition: all 0.3s ease-in-out;
 }
 main .auth form .noAccount:hover {
   color: #fc6240;
+}
+main .otp {
+  padding: 60px 16px;
+}
+main .otp .img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .otp .img img {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 768px) {
+  main .otp .img img {
+    width: 80%;
+  }
+}
+main .otp .otp_header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+}
+main .otp .otp_header p {
+  font-size: 14px;
+  text-align: center;
+  color: #000000;
+}
+main .otp .otp_header p span {
+  color: #fc6240;
+}
+main .otp form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  main .otp form {
+    padding: 0;
+    width: 100%;
+  }
+}
+main .otp form .otp-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  direction: ltr !important;
+  padding: 24px 0;
+}
+main .otp form .otp-container .otp-input {
+  border-radius: 4px;
+  width: 80px;
+  height: 60px;
+  text-align: center;
+  background: #fff7f5;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fc6240;
+  outline: none;
+  border: 1px solid #fee0d9;
+}
+@media (max-width: 576px) {
+  main .otp form .otp-container .otp-input {
+    width: 60px;
+  }
+}
+main .otp form .resend_code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .otp form .resend_code a {
+  color: #fc6240;
+  font-size: 14px;
+}
+main .otp form button {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  height: 54px;
+  border-radius: 4px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+main .otp form button:hover {
+  background: #fc6240;
 }
 main .about-us {
   padding: 60px 16px;
@@ -2429,76 +2629,67 @@ main .checkout_section .reciept ul li .text span:last-child {
   font-size: 12px;
   color: #777;
 }
-main .checkout_section .btns {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
+main .checkout_section .nav {
+  width: 100%;
   gap: 16px;
 }
-main .checkout_section .btns button {
-  border: none;
-  background: none;
-  outline: none;
-  width: min(200px, 100%);
-  height: 56px;
+main .checkout_section .nav .nav-link {
+  height: 48px;
+  padding: 8px 24px;
   background: #fafafa;
   transition: all 0.3s ease-in-out;
+  color: #000000;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 12px;
   gap: 4px;
 }
-main .checkout_section .btns button:hover, main .checkout_section .btns button.active {
+main .checkout_section .nav .nav-link:hover, main .checkout_section .nav .nav-link.active {
   color: #ffffff;
   background: #fc6240;
 }
-main .checkout_section .accordion-item {
-  border: 0 !important;
-  border-radius: 0 !important;
-  padding-bottom: 24px !important;
-}
-main .checkout_section .accordion-header {
+main .checkout_section form {
+  padding: 16px 0;
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
-main .checkout_section .accordion-header span {
-  font-size: 11px;
-  color: #999999;
+main .checkout_section form .input_filed {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-main .checkout_section .accordion-button {
-  padding: 0 !important;
-  box-shadow: none !important;
+main .checkout_section form .input_filed .loc {
+  display: flex;
+  gap: 8px;
+}
+main .checkout_section form .input_filed .loc .text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+main .checkout_section form .input_filed .loc .text p {
   font-size: 14px;
   color: #000000;
   font-weight: 600;
-  gap: 8px;
 }
-main .checkout_section .accordion-button i {
+main .checkout_section form .input_filed .loc .text span {
+  font-size: 12px;
+  color: #999999;
+  line-height: normal;
+}
+main .checkout_section form .input_filed .loc .icon {
+  padding-top: 6px;
+}
+main .checkout_section form .input_filed .loc .icon i {
   font-size: 18px;
   color: #fc6240;
 }
-main .checkout_section .accordion-button::after {
-  content: "\f107";
-  font-family: "Font Awesome 6 pro";
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  transform: none;
-}
-main .checkout_section .accordion-button:not(.collapsed) {
-  background: none !important;
-}
-main .checkout_section .accordion-button:not(.collapsed)::after {
-  content: "\f106";
-}
-main .checkout_section .accordion-body {
-  padding: 16px 0;
-}
-main .checkout_section .accordion-body input,
-main .checkout_section .accordion-body textarea {
+main .checkout_section form .input_filed input,
+main .checkout_section form .input_filed textarea {
   width: 100%;
   height: 56px;
   background: #fafafa;
@@ -2507,34 +2698,35 @@ main .checkout_section .accordion-body textarea {
   border-radius: 4px;
   padding: 8px 16px;
   font-size: 12px;
+  color: #000000;
 }
-main .checkout_section .accordion-body textarea {
+main .checkout_section form .input_filed textarea {
   height: 140px;
 }
-main .checkout_section .accordion-body ul {
+main .checkout_section form .input_filed ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-main .checkout_section .accordion-body ul li {
+main .checkout_section form .input_filed ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .checkout_section .accordion-body ul li label {
+main .checkout_section form .input_filed ul li label {
   display: flex;
   align-items: center;
   cursor: pointer;
   gap: 8px;
 }
-main .checkout_section .accordion-body ul li label img {
+main .checkout_section form .input_filed ul li label img {
   width: 24px;
 }
-main .checkout_section .accordion-body ul li label h6 {
+main .checkout_section form .input_filed ul li label h6 {
   margin: 0;
   font-size: 12px;
 }
-main .checkout_section .accordion-body ul li input {
+main .checkout_section form .input_filed ul li input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2543,7 +2735,7 @@ main .checkout_section .accordion-body ul li input {
   height: 14px;
   position: relative;
 }
-main .checkout_section .accordion-body ul li input::before {
+main .checkout_section form .input_filed ul li input::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2556,7 +2748,7 @@ main .checkout_section .accordion-body ul li input::before {
   border: 1px solid #999999;
   transition: all 0.3s ease-in-out;
 }
-main .checkout_section .accordion-body ul li input:checked::before {
+main .checkout_section form .input_filed ul li input:checked::before {
   border-color: #fc6240;
   background: #fc6240;
 }
@@ -2575,7 +2767,9 @@ main .checkout_section .cart_total p span {
   font-size: 18px;
   color: #fc6240;
 }
-main .checkout_section .cart_total a {
+main .checkout_section .cart_total button {
+  outline: none;
+  border: none;
   padding: 8px 48px;
   font-size: 12px;
   background: #000000;
@@ -2583,7 +2777,7 @@ main .checkout_section .cart_total a {
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
 }
-main .checkout_section .cart_total a:hover {
+main .checkout_section .cart_total button:hover {
   background: #fc6240;
 }
 main .favourits {
@@ -2786,11 +2980,94 @@ main .profile_section form button {
   border-radius: 8px;
   font-size: 14px;
 }
+main .faqs {
+  padding: 30px 0;
+}
+main .faqs .faqs-content {
+  padding-top: 60px;
+}
+main .faqs .faqs-content h3 {
+  font-size: 20px;
+  color: #fc6240;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+main .faqs .faqs-content h3 i {
+  transform: scaleX(-1);
+}
+main .faqs .accordion-button {
+  text-align: inherit;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 16px 0;
+}
+main .faqs .accordion-button:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+main .faqs .accordion-button::after {
+  content: "\f107";
+  font-family: "Font Awesome 6 pro";
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transform: none;
+}
+main .faqs .accordion-button:not(.collapsed) {
+  background: none !important;
+  box-shadow: none !important;
+  color: #fc6240;
+  background: none !important;
+}
+main .faqs .accordion-button:not(.collapsed)::after {
+  content: "\f106";
+}
+main .faqs .accordion-body {
+  padding: 16px 0 !important;
+}
+main .faqs .accordion-item {
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  border-bottom: 1px solid #eee !important;
+  border-radius: 0 !important;
+}
+main .faqs .accordion-item p {
+  font-size: 12px;
+  color: #000000;
+}
+main .faqs .accordion-item:last-child {
+  border-bottom: 0 !important;
+}
+main .terms {
+  padding: 40px 16px;
+}
+main .terms h1 {
+  font-size: 26px;
+  color: #000000;
+}
+main .terms p {
+  font-size: 12px;
+  color: #000000;
+  line-height: 24px;
+}
+main .terms ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main .terms ul li h2 {
+  font-size: 18px;
+  color: #fc6240;
+}
 
 footer {
   width: 100%;
   padding: 40px 16px;
-  border-top: 1px solid #fafafa;
+  border-top: 1px solid #eee;
 }
 footer .about_company {
   display: flex;

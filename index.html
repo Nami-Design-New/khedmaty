@@ -87,20 +87,9 @@
                     <span>0</span>
                 </div>
                 <!-- not logged in -->
-                <!-- <div class="dropdown">
-                    <a class="account" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li>
-                            <a class="dropdown-item" href="auth-login.html">تسجيل الدخول</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="auth-regiester.html">إنشاء حساب</a>
-                        </li>
-                    </ul>
-                </div> -->
+                <!-- <a href="auth.html">
+                    <i class="fa-regular fa-user"></i>
+                </a> -->
                 <!-- logged in -->
                 <div class="dropdown">
                     <a class="account" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
@@ -134,13 +123,79 @@
                 </button>
             </div>
         </nav>
-        <div class="mini_cart">
+        <!-- empty cart -->
+        <!--  <div class="mini_cart empty">
             <p>هناك 0 عنصر في سلة التسوق الخاصة بك</p>
             <div class="inner_cart">
                 <img src="assets/images/empty-cart.png" alt="empty-cart">
                 <div class="subtotal">
                     <p> الإجمالى:</p>
                     <span>0,00 ريال</span>
+                </div>
+            </div>
+            <div class="btns">
+                <a href="shopping-cart.html">عربة التسوق</a>
+                <a href="checkout.html">الدفع</a>
+            </div>
+        </div> -->
+        <!-- filled -->
+        <div class="mini_cart">
+            <p>هناك <span>1</span> عنصر في سلة التسوق الخاصة بك</p>
+            <div class="inner_cart">
+                <div class="product">
+                    <div class="img">
+                        <img src="assets/images/pro1.jpg" alt="product">
+                    </div>
+                    <div class="info">
+                        <h6>
+                            <a href="product-details.html">طقم لمبات فيليبس ليد HB3/4</a>
+                        </h6>
+                        <p>السعر :<span>2500 ريال</span></p>
+                        <div class="count_delete">
+                            <p>الكمية : <span>X2</span></p>
+                            <button>
+                                <i class="fa-regular fa-trash-can-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="img">
+                        <img src="assets/images/pro1.jpg" alt="product">
+                    </div>
+                    <div class="info">
+                        <h6>
+                            <a href="product-details.html">طقم لمبات فيليبس ليد HB3/4</a>
+                        </h6>
+                        <p>السعر :<span>2500 ريال</span></p>
+                        <div class="count_delete">
+                            <p>الكمية : <span>X2</span></p>
+                            <button>
+                                <i class="fa-regular fa-trash-can-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="img">
+                        <img src="assets/images/pro1.jpg" alt="product">
+                    </div>
+                    <div class="info">
+                        <h6>
+                            <a href="product-details.html">طقم لمبات فيليبس ليد HB3/4</a>
+                        </h6>
+                        <p>السعر :<span>2500 ريال</span></p>
+                        <div class="count_delete">
+                            <p>الكمية : <span>X2</span></p>
+                            <button>
+                                <i class="fa-regular fa-trash-can-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="subtotal">
+                    <p> الإجمالى:</p>
+                    <span>80,00 ريال</span>
                 </div>
             </div>
             <div class="btns">
@@ -210,7 +265,7 @@
                     </div>
                     <div class="col-lg-3 p-1" id="order3">
                         <div class="inner-section">
-                            <div class="slide">
+                            <div class="slide center">
                                 <img src="assets/images/left.jpg" alt="">
                                 <div class="layer">
                                     <h5>صحة المحرك أمر بالغ الأهمية</h5>
@@ -547,9 +602,9 @@
                             <div class="product_image">
                                 <img src="assets/images/pro1.jpg" alt="product">
                                 <span>أوريون</span>
-                                        <button>
-                                            <i class="fa-sharp fa-light fa-heart"></i>
-                                        </button>
+                                <button>
+                                    <i class="fa-sharp fa-light fa-heart"></i>
+                                </button>
                             </div>
                             <div class="product_info">
                                 <h5 class="pro_name" title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
@@ -578,9 +633,9 @@
                             <div class="product_image">
                                 <img src="assets/images/pro2.jpg" alt="product">
                                 <span>أوريون</span>
-                                        <button>
-                                            <i class="fa-sharp fa-light fa-heart"></i>
-                                        </button>
+                                <button>
+                                    <i class="fa-sharp fa-light fa-heart"></i>
+                                </button>
                             </div>
                             <div class="product_info">
                                 <h5 class="pro_name" title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
@@ -609,9 +664,9 @@
                             <div class="product_image">
                                 <img src="assets/images/pro3.jpg" alt="product">
                                 <span>أوريون</span>
-                                        <button>
-                                            <i class="fa-sharp fa-light fa-heart"></i>
-                                        </button>
+                                <button>
+                                    <i class="fa-sharp fa-light fa-heart"></i>
+                                </button>
                             </div>
                             <div class="product_info">
                                 <h5 class="pro_name" title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
@@ -640,9 +695,9 @@
                             <div class="product_image">
                                 <img src="assets/images/pro4.jpg" alt="product">
                                 <span>أوريون</span>
-                                        <button>
-                                            <i class="fa-sharp fa-light fa-heart"></i>
-                                        </button>
+                                <button>
+                                    <i class="fa-sharp fa-light fa-heart"></i>
+                                </button>
                             </div>
                             <div class="product_info">
                                 <h5 class="pro_name" title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
@@ -671,9 +726,9 @@
                             <div class="product_image">
                                 <img src="assets/images/pro1.jpg" alt="product">
                                 <span>أوريون</span>
-                                        <button>
-                                            <i class="fa-sharp fa-light fa-heart"></i>
-                                        </button>
+                                <button>
+                                    <i class="fa-sharp fa-light fa-heart"></i>
+                                </button>
                             </div>
                             <div class="product_info">
                                 <h5 class="pro_name" title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
@@ -702,9 +757,9 @@
                             <div class="product_image">
                                 <img src="assets/images/pro3.jpg" alt="product">
                                 <span>أوريون</span>
-                                        <button>
-                                            <i class="fa-sharp fa-light fa-heart"></i>
-                                        </button>
+                                <button>
+                                    <i class="fa-sharp fa-light fa-heart"></i>
+                                </button>
                             </div>
                             <div class="product_info">
                                 <h5 class="pro_name" title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
@@ -784,7 +839,7 @@
             <div class="container">
                 <h2>آخر المستجدات والأفكار المبتكرة</h2>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12 p-3">
+                    <div class="col-lg-4 col-md-6 col-12 p-lg-3 p-2">
                         <div class="blog">
                             <a href="blog.html">
                                 <div class="blog_image">
@@ -808,7 +863,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12 p-3">
+                    <div class="col-lg-4 col-md-6 col-12 p-lg-3 p-2">
                         <div class="blog">
                             <a href="blog.html">
                                 <div class="blog_image">
@@ -832,7 +887,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12 p-3">
+                    <div class="col-lg-4 col-md-6 col-12 p-lg-3 p-2">
                         <div class="blog">
                             <a href="blog.html">
                                 <div class="blog_image">
@@ -914,17 +969,15 @@
                         <h4>عن شركتنا</h4>
                         <ul>
                             <li>
-                                <a href="#">من نحن</a>
+                                <a href="about-us.html">من نحن</a>
                             </li>
                             <li>
-                                <a href="#">الشركاء</a>
+                                <a href="stores.html">المتاجر</a>
                             </li>
                             <li>
-                                <a href="#">المدونات</a>
+                                <a href="blogs.html">المدونات</a>
                             </li>
-                            <li>
-                                <a href="#">انضم الى فريق العمل</a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -933,16 +986,16 @@
                         <h4>روابط مهمه</h4>
                         <ul>
                             <li>
-                                <a href="#">سياسة الخصوصية</a>
+                                <a href="privacy-policy.html">سياسة الخصوصية</a>
                             </li>
                             <li>
-                                <a href="#">الشروط والأحكام</a>
+                                <a href="terms-conditions.html">الشروط والأحكام</a>
                             </li>
                             <li>
-                                <a href="#">الاسئلة الشائعة</a>
+                                <a href="FAQs.html">الاسئلة الشائعة</a>
                             </li>
                             <li>
-                                <a href="#">الدعم والمساعدة</a>
+                                <a href="contact-us.html">الدعم والمساعدة</a>
                             </li>
                         </ul>
                     </div>

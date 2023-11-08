@@ -40,13 +40,16 @@ let servicesBarSwiper = new Swiper(".servicesBarSwiper", {
 });
 // nav bar fixed up
 let header = document.querySelector("header");
+let heroSection = document.querySelector("main");
 window.addEventListener("scroll", () => {
   if (this.scrollY > 120) {
     header.classList.add("sticky");
     document.querySelector(".mini_cart").style.top = "80px";
+    heroSection.style.margin = "130px 0 0"
   } else {
     header.classList.remove("sticky");
     document.querySelector(".mini_cart").style.top = "130px";
+    heroSection.style.margin = "0"
   }
 });
 // small cart toggle

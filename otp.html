@@ -86,26 +86,9 @@
                     <i class="fa-light fa-bag-shopping"></i>
                     <span>0</span>
                 </div>
-                <div class="dropdown">
-                    <a class="account" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li>
-                            <a class="dropdown-item" href="auth-login.html">تسجيل الدخول</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="auth-regiester.html">إنشاء حساب</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="profile.html">الملف الشخصى</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="auth-login.html">تسجيل الخروج</a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="auth.html">
+                    <i class="fa-regular fa-user"></i>
+                </a>
                 <button data-bs-toggle="modal" data-bs-target="#searchModal">
                     <i class="fa-regular fa-magnifying-glass"></i>
                 </button>
@@ -116,7 +99,7 @@
                 </button>
             </div>
         </nav>
-        <div class="mini_cart">
+        <div class="mini_cart empty">
             <p>هناك 0 عنصر في سلة التسوق الخاصة بك</p>
             <div class="inner_cart">
                 <img src="assets/images/empty-cart.png" alt="empty-cart">
@@ -133,49 +116,41 @@
     </header>
     <!-- main container -->
     <main>
-        <!-- page header -->
-        <div class="page_header container d-flex align-items-center">
-            <h6>
-                <a href="index.html">الرئيسية</a>
-                <i class="fa-regular fa-angle-left"></i>
-                تسجيل الدخول
-            </h6>
-        </div>
-        <!-- auth-login section -->
-        <section class="auth">
+        <section class="otp">
             <div class="container">
-                <h2 class="auth-head">تسجيل الدخول</h2>
-                <p class="auth-subhead">اهلا بك ...! ادخل بياناتك المسجلة لإتمام عملية الدخول</p>
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-12">
+                        <div class="img">
+                            <img src="assets/images/OTP.svg" alt="otp">
+                        </div>
+                        <div class="otp_header">
+                            <p>
+                                من فضلك ادخل رمز التحقق المرسل الي رقم الجوال
+                                <span> +9960123456</span>
+                            </p>
+                        </div>
                         <form action="index.html">
-                            <!-- field set -->
-                            <div class="input_field">
-                                <label for="email">
-                                    <i class="fa-sharp fa-light fa-envelope"></i>
-                                    البريد الألكتروني
-                                </label>
-                                <input type="email" id="email" name="email" placeholder="example@example.com">
+                            <div class="otp-container">
+                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                                    required id="finput">
+                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                                    required>
+                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                                    required>
+                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                                    required>
+                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]"
+                                    required>
                             </div>
-                            <!-- field set -->
-                            <div class="input_field">
-                                <label for="password">
-                                    <i class="fa-sharp fa-light fa-lock"></i>
-                                    كلمة السر
-                                </label>
-                                <input type="password" id="password" name="password"
-                                    placeholder="•••••••••••••••••••••••">
+                            <div class="resend_code">
+                                <a href="#">اعادة ارسال الرمز</a>
+                                <div class="timer">
+                                    <span>00:48</span>
+                                </div>
                             </div>
-                            <!-- reset-password -->
-                            <a class="reset" href="auth-reset-password.html"> هل نسيت كلمة المرور ؟ </a>
-                            <button class="login" type="submit">تسجيل الدخول</button>
-                            <!-- login with google  -->
-                            <div class="line"><span>أو تسجيل الدخول بواسطة</span></div>
-                            <button class="google-login">
-                                <img src="assets/images/Google.svg" alt="google"> حساب جوجل
+                            <button type="submit">
+                                تأكيد
                             </button>
-                            <!-- create account -->
-                            <a href="auth-regiester.html" class="noAccount">ليس لديك حساب ؟ <span>انشاء حساب</span></a>
                         </form>
                     </div>
                 </div>
@@ -202,17 +177,15 @@
                         <h4>عن شركتنا</h4>
                         <ul>
                             <li>
-                                <a href="#">من نحن</a>
+                                <a href="about-us.html">من نحن</a>
                             </li>
                             <li>
-                                <a href="#">الشركاء</a>
+                                <a href="stores.html">المتاجر</a>
                             </li>
                             <li>
-                                <a href="#">المدونات</a>
+                                <a href="blogs.html">المدونات</a>
                             </li>
-                            <li>
-                                <a href="#">انضم الى فريق العمل</a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -221,16 +194,16 @@
                         <h4>روابط مهمه</h4>
                         <ul>
                             <li>
-                                <a href="#">سياسة الخصوصية</a>
+                                <a href="privacy-policy.html">سياسة الخصوصية</a>
                             </li>
                             <li>
-                                <a href="#">الشروط والأحكام</a>
+                                <a href="terms-conditions.html">الشروط والأحكام</a>
                             </li>
                             <li>
-                                <a href="#">الاسئلة الشائعة</a>
+                                <a href="FAQs.html">الاسئلة الشائعة</a>
                             </li>
                             <li>
-                                <a href="#">الدعم والمساعدة</a>
+                                <a href="contact-us.html">الدعم والمساعدة</a>
                             </li>
                         </ul>
                     </div>
@@ -431,6 +404,29 @@
     <!-- JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+        const otpContainer = document.querySelector('.otp-container');
+        const firstInput = document.getElementById("finput").focus();
+        otpContainer.addEventListener('input', (event) => {
+            const currentInput = event.target;
+            const nextInput = currentInput.nextElementSibling;
+            const prevInput = currentInput.previousElementSibling;
+            if (currentInput.value && nextInput) {
+                nextInput.focus();
+            } else if (!currentInput.value && prevInput) {
+                prevInput.focus();
+            }
+        });
+        otpContainer.addEventListener('keydown', (event) => {
+            if (event.key === 'Backspace') {
+                const currentInput = event.target;
+                const prevInput = currentInput.previousElementSibling;
+                if (!currentInput.value && prevInput) {
+                    prevInput.focus();
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

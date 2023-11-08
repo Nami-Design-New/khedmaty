@@ -86,26 +86,9 @@
                     <i class="fa-light fa-bag-shopping"></i>
                     <span>0</span>
                 </div>
-                <div class="dropdown">
-                    <a class="account" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li>
-                            <a class="dropdown-item" href="auth-login.html">تسجيل الدخول</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="auth-regiester.html">إنشاء حساب</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="profile.html">الملف الشخصى</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="auth-login.html">تسجيل الخروج</a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="auth.html">
+                    <i class="fa-regular fa-user"></i>
+                </a>
                 <button data-bs-toggle="modal" data-bs-target="#searchModal">
                     <i class="fa-regular fa-magnifying-glass"></i>
                 </button>
@@ -116,7 +99,7 @@
                 </button>
             </div>
         </nav>
-        <div class="mini_cart">
+        <div class="mini_cart empty">
             <p>هناك 0 عنصر في سلة التسوق الخاصة بك</p>
             <div class="inner_cart">
                 <img src="assets/images/empty-cart.png" alt="empty-cart">
@@ -145,7 +128,7 @@
         <section class="checkout_section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-12 p-0">
+                    <div class="col-lg-6 col-12">
                         <div class="products">
                             <div class="product">
                                 <div class="pro_img">
@@ -185,86 +168,94 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-12 ps-lg-3 p-0">
-                        <div class="reciept">
-                            <ul>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fa-light fa-map-pin"></i>
-                                    </div>
-                                    <div class="text">
-                                        <span>عنوان التوصيل</span>
-                                        <span>الرياض , ابي بكر الرازي</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fa-solid fa-wallet"></i>
-                                    </div>
-                                    <div class="text">
-                                        <span> طريقة الدفع</span>
-                                        <span>كاش</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fa-light fa-circle-exclamation"></i>
-                                    </div>
-                                    <div class="text">
-                                        <span>ملاحظات</span>
-                                        <span>لا توجد ملاحظات</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="fa-light fa-calendar-days"></i>
-                                    </div>
-                                    <div class="text">
-                                        <span>موعد الاستلام</span>
-                                        <p><span>2023-08-16</span> - <span>16:30</span></p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 p-0">
-                        <div class="btns">
-                            <button class="active">
-                                <i class="fa-light fa-truck-fast"></i> توصيل
-                            </button>
-                            <button>
-                                <i class="fa-regular fa-store"></i> استلام من المتجر
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-12 p-0">
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <i class="fa-light fa-map-pin"></i> عنوان التوصيل
-                                    </button>
-                                    <span class="recieve_location">الرياض , ابي بكر الرازي</span>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
+                    <div class="col-lg-6 col-12">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-charge-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-charge" type="button" role="tab" aria-controls="pills-charge"
+                                    aria-selected="true">
+                                    <i class="fa-light fa-truck-fast"></i> توصيل
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">
+                                    <i class="fa-regular fa-store"></i> استلام من المتجر
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-charge" role="tabpanel"
+                                aria-labelledby="pills-charge-tab">
+                                <form action="">
+                                    <div class="input_filed">
+                                        <div class="loc">
+                                            <div class="icon">
+                                                <i class="fa-light fa-map-pin"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p>عنوان التوصيل</p>
+                                                <span class="recieve_location">الرياض , ابي بكر الرازي</span>
+                                            </div>
+                                        </div>
                                         <input type="text" id="address" name="address" placeholder="عنوان التوصيل">
                                     </div>
-                                </div>
+                                    <div class="input_filed">
+                                        <div class="loc">
+                                            <div class="icon">
+                                                <i class="fa-solid fa-wallet"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p>طريقة الدفع</p>
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <label for="cach2" class="field_name">
+                                                    <h6>كاش</h6>
+                                                </label>
+                                                <input checked type="radio" name="payment_method2" id="cach2">
+                                            </li>
+                                            <li>
+                                                <label for="apple_pay2" class="field_name">
+                                                    <img src="assets/images/method3.svg" alt="">
+                                                    <h6>أبل باى</h6>
+                                                </label>
+                                                <input type="radio" name="payment_method2" id="apple_pay2">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="input_filed">
+                                        <div class="loc">
+                                            <div class="icon">
+                                                <i class="fa-light fa-circle-exclamation"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p>ملاحظات</p>
+                                            </div>
+                                        </div>
+                                        <textarea name="notice" id="notice"
+                                            placeholder="إكتب ملاحظات على الطلب..."></textarea>
+                                    </div>
+                                    <div class="cart_total">
+                                        <p>الإجمالى : <span>260</span> ريال</p>
+                                        <button type="submit">إرسال الطلب</button>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <i class="fa-solid fa-wallet"></i> طريقة الدفع
-                                    </button>
-                                    <span>كاش</span>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                aria-labelledby="pills-profile-tab">
+                                <form action="">
+                                    <div class="input_filed">
+                                        <div class="loc">
+                                            <div class="icon">
+                                                <i class="fa-solid fa-wallet"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p>طريقة الدفع</p>
+                                            </div>
+                                        </div>
                                         <ul>
                                             <li>
                                                 <label for="cach" class="field_name">
@@ -281,30 +272,24 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        <i class="fa-light fa-circle-exclamation"></i> ملاحظات
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
+                                    <div class="input_filed">
+                                        <div class="loc">
+                                            <div class="icon">
+                                                <i class="fa-light fa-circle-exclamation"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p>ملاحظات</p>
+                                            </div>
+                                        </div>
                                         <textarea name="notice" id="notice"
                                             placeholder="إكتب ملاحظات على الطلب..."></textarea>
                                     </div>
-                                </div>
+                                    <div class="cart_total">
+                                        <p>الإجمالى : <span>260</span> ريال</p>
+                                        <button type="submit">إرسال الطلب</button>
+                                    </div>
+                                </form>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-12 p-0">
-                        <div class="cart_total">
-                            <p>الإجمالى : <span>260</span> ريال</p>
-                            <a href="checkout.html">إرسال الطلب</a>
                         </div>
                     </div>
                 </div>
@@ -331,16 +316,13 @@
                         <h4>عن شركتنا</h4>
                         <ul>
                             <li>
-                                <a href="#">من نحن</a>
+                                <a href="about-us.html">من نحن</a>
                             </li>
                             <li>
-                                <a href="#">الشركاء</a>
+                                <a href="stores.html">المتاجر</a>
                             </li>
                             <li>
-                                <a href="#">المدونات</a>
-                            </li>
-                            <li>
-                                <a href="#">انضم الى فريق العمل</a>
+                                <a href="blogs.html">المدونات</a>
                             </li>
                         </ul>
                     </div>
@@ -350,16 +332,16 @@
                         <h4>روابط مهمه</h4>
                         <ul>
                             <li>
-                                <a href="#">سياسة الخصوصية</a>
+                                <a href="privacy-policy.html">سياسة الخصوصية</a>
                             </li>
                             <li>
-                                <a href="#">الشروط والأحكام</a>
+                                <a href="terms-conditions.html">الشروط والأحكام</a>
                             </li>
                             <li>
-                                <a href="#">الاسئلة الشائعة</a>
+                                <a href="FAQs.html">الاسئلة الشائعة</a>
                             </li>
                             <li>
-                                <a href="#">الدعم والمساعدة</a>
+                                <a href="contact-us.html">الدعم والمساعدة</a>
                             </li>
                         </ul>
                     </div>

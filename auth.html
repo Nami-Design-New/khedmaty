@@ -86,26 +86,9 @@
                     <i class="fa-light fa-bag-shopping"></i>
                     <span>0</span>
                 </div>
-                <div class="dropdown">
-                    <a class="account" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li>
-                            <a class="dropdown-item" href="auth-login.html">تسجيل الدخول</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="auth-regiester.html">إنشاء حساب</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="profile.html">الملف الشخصى</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="auth-login.html">تسجيل الخروج</a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="auth.html">
+                    <i class="fa-regular fa-user"></i>
+                </a>
                 <button data-bs-toggle="modal" data-bs-target="#searchModal">
                     <i class="fa-regular fa-magnifying-glass"></i>
                 </button>
@@ -116,7 +99,7 @@
                 </button>
             </div>
         </nav>
-        <div class="mini_cart">
+        <div class="mini_cart empty">
             <p>هناك 0 عنصر في سلة التسوق الخاصة بك</p>
             <div class="inner_cart">
                 <img src="assets/images/empty-cart.png" alt="empty-cart">
@@ -138,77 +121,31 @@
             <h6>
                 <a href="index.html">الرئيسية</a>
                 <i class="fa-regular fa-angle-left"></i>
-                إنشاء حساب جديد
+                تسجيل الدخول
             </h6>
         </div>
-        <!-- auth-regiester section -->
+        <!-- auth-login section -->
         <section class="auth">
             <div class="container">
-                <h2 class="auth-head">إنشاء حساب</h2>
-                <p class="auth-subhead">أهلاً بك ...! يُرجى إدخال معلوماتك لإتمام عملية التسجيل والوصول إلى خدماتنا.</p>
+                <h2 class="auth-head">تسجيل الدخول</h2>
+                <p class="auth-subhead">اهلا بك ...! ادخل بياناتك المسجلة لإتمام عملية الدخول</p>
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-12">
-                        <form action="index.html">
-                            <!-- ** -->
-                            <div class="form-group">
-                                <!-- field set -->
-                                <div class="input_field">
-                                    <label for="fullName">
-                                        <i class="fa-light fa-user"></i>
-                                        الإسم كاملا
-                                    </label>
-                                    <input type="text" id="fullName" name="fullName" placeholder="محمد على كلاى">
-                                </div>
-                                <!-- field set -->
-                                <div class="input_field">
-                                    <label for="email">
-                                        <i class="fa-sharp fa-light fa-envelope"></i>
-                                        البريد الألكتروني
-                                    </label>
-                                    <input type="email" id="email" name="email" placeholder="example@example.com">
-                                </div>
+                        <form action="otp.html">
+                            <div class="banner mb-3">
+                                <img src="assets/images/saudia.png" alt="saudia">
+                                <h6>المملكة العربية السعودية</h6>
                             </div>
                             <!-- field set -->
                             <div class="input_field">
-                                <label for="address">
-                                    <i class="fa-sharp fa-light fa-location-dot"></i>
-                                    العنوان تفصيليا
+                                <label for="phone">
+                                    <i class="fa-light fa-phone"></i>
+                                    رقم الجوال
                                 </label>
-                                <input type="text" id="address" name="address"
-                                    placeholder="السلام المدينة المنورة السعودية">
+                                <input type="tel" id="phone" name="phone" placeholder="5xxxxxxxxxxx+">
                             </div>
-                            <!-- ** -->
-                            <div class="form-group">
-                                <!-- field set -->
-                                <div class="input_field">
-                                    <label for="password">
-                                        <i class="fa-sharp fa-light fa-lock"></i>
-                                        كلمة السر
-                                    </label>
-                                    <input type="password" id="password" name="password"
-                                        placeholder="•••••••••••••••••••••••">
-                                </div>
-                                <!-- field set -->
-                                <div class="input_field">
-                                    <label for="password">
-                                        <i class="fa-sharp fa-light fa-lock"></i>
-                                        تاكيد كلمة السر
-                                    </label>
-                                    <input type="password" id="password" name="password"
-                                        placeholder="•••••••••••••••••••••••">
-                                </div>
-                            </div>
-                            <!-- accept terms and conditions -->
-                            <p>بمواصلتك، فإنك توافق على
-                                <a href="terms-conditions.html">الشروط الأحكام</a> و
-                                <a href="privacy-policy.html">سياسة الخصوصية </a>
-                                الخاصة بخدمتى
-                            </p>
-                            <button class="login" type="submit">إنشاء الحساب</button>
-                            <!-- signup with google  -->
-                            <div class="line"><span>أو أنشئ حساب بواسطة</span></div>
-                            <button class="google-login">
-                                <img src="assets/images/Google.svg" alt="google"> حساب جوجل
+                            <button class="login mt-3" type="submit">
+                                دخول
                             </button>
                         </form>
                     </div>
@@ -236,17 +173,15 @@
                         <h4>عن شركتنا</h4>
                         <ul>
                             <li>
-                                <a href="#">من نحن</a>
+                                <a href="about-us.html">من نحن</a>
                             </li>
                             <li>
-                                <a href="#">الشركاء</a>
+                                <a href="stores.html">المتاجر</a>
                             </li>
                             <li>
-                                <a href="#">المدونات</a>
+                                <a href="blogs.html">المدونات</a>
                             </li>
-                            <li>
-                                <a href="#">انضم الى فريق العمل</a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -255,16 +190,16 @@
                         <h4>روابط مهمه</h4>
                         <ul>
                             <li>
-                                <a href="#">سياسة الخصوصية</a>
+                                <a href="privacy-policy.html">سياسة الخصوصية</a>
                             </li>
                             <li>
-                                <a href="#">الشروط والأحكام</a>
+                                <a href="terms-conditions.html">الشروط والأحكام</a>
                             </li>
                             <li>
-                                <a href="#">الاسئلة الشائعة</a>
+                                <a href="FAQs.html">الاسئلة الشائعة</a>
                             </li>
                             <li>
-                                <a href="#">الدعم والمساعدة</a>
+                                <a href="contact-us.html">الدعم والمساعدة</a>
                             </li>
                         </ul>
                     </div>
