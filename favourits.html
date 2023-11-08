@@ -144,237 +144,277 @@
         <!-- favourits section -->
         <section class="favourits">
             <div class="container">
-                <ul class="nav saved_items_tabs nav-pills mb-3" id="pills-tab" role="tablist">
-                    <!-- stores tab btn -->
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-stores-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-stores" type="button" role="tab" aria-controls="pills-stores"
-                            aria-selected="true">
-                            المتاجر
-                        </button>
-                    </li>
-                    <!-- products tab btn -->
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-products-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-products" type="button" role="tab" aria-controls="pills-products"
-                            aria-selected="false">
-                            المنتجات
-                        </button>
-                    </li>
-                </ul>
-                <div class="tab-content" id="pills-tabContent">
-                    <!-- stores tab -->
-                    <div class="tab-pane fade show active" id="pills-stores" role="tabpanel"
-                        aria-labelledby="pills-stores-tab">
-                        <div class="row">
-                            <div class="col-lg-3 col-6 p-2">
-                                <div class="store_card ">
-                                    <div class="logo">
-                                        <img src="assets/images/partener1.png" alt="partener">
-                                    </div>
-                                    <h6>الوعلان للتجارة</h6>
-                                    <p>
-                                        <i class="fa-light fa-map-pin"></i>
-                                        <span>الرياض , ابي بكر الرازي </span>
-                                    </p>
-                                    <button class="save">
-                                        <i class="fa-regular fa-bookmark"></i>
-                                    </button>
+                <div class="row">
+                    <div class="col-lg-4 col-12 mb-lg-0 mb-4">
+                        <div class="profile_side_bar">
+                            <div class="user_img">
+                                <div class="img">
+                                    <img src="assets/images/av3.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-6 p-2">
-                                <div class="store_card ">
-                                    <div class="logo">
-                                        <img src="assets/images/partener2.png" alt="partener">
-                                    </div>
-                                    <h6>السلمي للمحركات</h6>
-                                    <p>
-                                        <i class="fa-light fa-map-pin"></i>
-                                        <span>الرياض , ابي بكر الرازي </span>
-                                    </p>
-                                    <button class="save">
-                                        <i class="fa-regular fa-bookmark"></i>
-                                    </button>
-                                </div>
+                            <div class="info">
+                                <h6>محمود جمال الكومي</h6>
+                                <span>0555489846</span>
                             </div>
-                            <div class="col-lg-3 col-6 p-2">
-                                <div class="store_card ">
-                                    <div class="logo">
-                                        <img src="assets/images/partener3.png" alt="partener">
-                                    </div>
-                                    <h6>HYUNDIA</h6>
-                                    <p>
-                                        <i class="fa-light fa-map-pin"></i>
-                                        <span>الرياض , ابي بكر الرازي </span>
-                                    </p>
-                                    <button class="save">
-                                        <i class="fa-regular fa-bookmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-6 p-2">
-                                <div class="store_card ">
-                                    <div class="logo">
-                                        <img src="assets/images/partener4.png" alt="partener">
-                                    </div>
-                                    <h6>المجدوعي</h6>
-                                    <p>
-                                        <i class="fa-light fa-map-pin"></i>
-                                        <span>الرياض , ابي بكر الرازي </span>
-                                    </p>
-                                    <button class="save">
-                                        <i class="fa-regular fa-bookmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-6 p-2">
-                                <div class="store_card ">
-                                    <div class="logo">
-                                        <img src="assets/images/bmw.png" alt="partener">
-                                    </div>
-                                    <h6>BMW</h6>
-                                    <p>
-                                        <i class="fa-light fa-map-pin"></i>
-                                        <span>الرياض , ابي بكر الرازي </span>
-                                    </p>
-                                    <button class="save">
-                                        <i class="fa-regular fa-bookmark"></i>
-                                    </button>
-                                </div>
-                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="profile.html"><i class="fa-light fa-user-pen"></i> تعديل الحساب</a>
+                                </li>
+                                <li class="active">
+                                    <a href="favourits.html"><i class="fa-sharp fa-light fa-heart"></i> المفضلة</a>
+                                </li>
+                                <li>
+                                    <a href="orders.html"><i class="fa-sharp fa-regular fa-store"></i> طلباتي</a>
+                                </li>
+                                <li>
+                                    <a href="auth.html"><i class="fa-sharp fa-regular fa-arrow-right-from-bracket"></i>
+                                        تسجيل الخروج </a>
+                                </li>
+                                <li>
+                                    <a href="auth.html"><i class="fa-regular fa-user-xmark"></i> حذف الحساب</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <!-- product tab -->
-                    <div class="tab-pane fade" id="pills-products" role="tabpanel" aria-labelledby="pills-products-tab">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-4 col-6 p-lg-2 p-1">
-                                <div class="product_crad">
-                                    <div class="product_image">
-                                        <img src="assets/images/pro1.jpg" alt="product">
-                                        <span>أوريون</span>
-                                        <button>
-                                            <i class="fa-sharp fa-light fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="product_info">
-                                        <h5 class="pro_name" title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
-                                            <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
-                                        </h5>
-                                        <p class="pro_number">NO: 6287019946008</p>
-                                        <p class="trader">تاجر الرياض - 815</p>
-                                        <div class="price_buy">
-                                            <h6>180 ريال</h6>
-                                            <button>
-                                                <i class="fa-regular fa-cart-shopping-fast"></i>
+                    <div class="col-lg-8 col-12">
+                        <ul class="nav saved_items_tabs nav-pills mb-3" id="pills-tab" role="tablist">
+                            <!-- stores tab btn -->
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-stores-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-stores" type="button" role="tab" aria-controls="pills-stores"
+                                    aria-selected="true">
+                                    المتاجر
+                                </button>
+                            </li>
+                            <!-- products tab btn -->
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-products-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-products" type="button" role="tab"
+                                    aria-controls="pills-products" aria-selected="false">
+                                    المنتجات
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <!-- stores tab -->
+                            <div class="tab-pane fade show active" id="pills-stores" role="tabpanel"
+                                aria-labelledby="pills-stores-tab">
+                                <div class="row">
+                                    <div class="col-lg-4 col-6 p-2">
+                                        <div class="store_card ">
+                                            <div class="logo">
+                                                <img src="assets/images/partener1.png" alt="partener">
+                                            </div>
+                                            <h6>الوعلان للتجارة</h6>
+                                            <p>
+                                                <i class="fa-light fa-map-pin"></i>
+                                                <span>الرياض , ابي بكر الرازي </span>
+                                            </p>
+                                            <button class="save">
+                                                <i class="fa-regular fa-bookmark"></i>
                                             </button>
                                         </div>
-                                        <div class="rate_sale">
+                                    </div>
+                                    <div class="col-lg-4 col-6 p-2">
+                                        <div class="store_card ">
+                                            <div class="logo">
+                                                <img src="assets/images/partener2.png" alt="partener">
+                                            </div>
+                                            <h6>السلمي للمحركات</h6>
                                             <p>
-                                                <span class="old_price">400 ريال</span>
-                                                <span class="sale">خصم 49.07%</span>
+                                                <i class="fa-light fa-map-pin"></i>
+                                                <span>الرياض , ابي بكر الرازي </span>
                                             </p>
-                                            <a href="#!">
-                                                <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
-                                            </a>
+                                            <button class="save">
+                                                <i class="fa-regular fa-bookmark"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-6 p-2">
+                                        <div class="store_card ">
+                                            <div class="logo">
+                                                <img src="assets/images/partener3.png" alt="partener">
+                                            </div>
+                                            <h6>HYUNDIA</h6>
+                                            <p>
+                                                <i class="fa-light fa-map-pin"></i>
+                                                <span>الرياض , ابي بكر الرازي </span>
+                                            </p>
+                                            <button class="save">
+                                                <i class="fa-regular fa-bookmark"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-6 p-2">
+                                        <div class="store_card ">
+                                            <div class="logo">
+                                                <img src="assets/images/partener4.png" alt="partener">
+                                            </div>
+                                            <h6>المجدوعي</h6>
+                                            <p>
+                                                <i class="fa-light fa-map-pin"></i>
+                                                <span>الرياض , ابي بكر الرازي </span>
+                                            </p>
+                                            <button class="save">
+                                                <i class="fa-regular fa-bookmark"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-6 p-2">
+                                        <div class="store_card ">
+                                            <div class="logo">
+                                                <img src="assets/images/bmw.png" alt="partener">
+                                            </div>
+                                            <h6>BMW</h6>
+                                            <p>
+                                                <i class="fa-light fa-map-pin"></i>
+                                                <span>الرياض , ابي بكر الرازي </span>
+                                            </p>
+                                            <button class="save">
+                                                <i class="fa-regular fa-bookmark"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-6 p-lg-2 p-1">
-                                <div class="product_crad">
-                                    <div class="product_image">
-                                        <img src="assets/images/pro2.jpg" alt="product">
-                                        <span>أوريون</span>
-                                        <button>
-                                            <i class="fa-sharp fa-light fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="product_info">
-                                        <h5 class="pro_name" title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
-                                            <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
-                                        </h5>
-                                        <p class="pro_number">NO: 6287019946008</p>
-                                        <p class="trader">تاجر الرياض - 815</p>
-                                        <div class="price_buy">
-                                            <h6>180 ريال</h6>
-                                            <button>
-                                                <i class="fa-regular fa-cart-shopping-fast"></i>
-                                            </button>
-                                        </div>
-                                        <div class="rate_sale">
-                                            <p>
-                                                <span class="old_price">400 ريال</span>
-                                                <span class="sale">خصم 49.07%</span>
-                                            </p>
-                                            <a href="#!">
-                                                <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6 p-lg-2 p-1">
-                                <div class="product_crad">
-                                    <div class="product_image">
-                                        <img src="assets/images/pro3.jpg" alt="product">
-                                        <span>أوريون</span>
-                                        <button>
-                                            <i class="fa-sharp fa-light fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="product_info">
-                                        <h5 class="pro_name" title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
-                                            <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
-                                        </h5>
-                                        <p class="pro_number">NO: 6287019946008</p>
-                                        <p class="trader">تاجر الرياض - 815</p>
-                                        <div class="price_buy">
-                                            <h6>180 ريال</h6>
-                                            <button>
-                                                <i class="fa-regular fa-cart-shopping-fast"></i>
-                                            </button>
-                                        </div>
-                                        <div class="rate_sale">
-                                            <p>
-                                                <span class="old_price">400 ريال</span>
-                                                <span class="sale">خصم 49.07%</span>
-                                            </p>
-                                            <a href="#!">
-                                                <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
-                                            </a>
+                            <!-- product tab -->
+                            <div class="tab-pane fade" id="pills-products" role="tabpanel"
+                                aria-labelledby="pills-products-tab">
+                                <div class="row">
+                                    <div class="col-lg-4 col-6 p-lg-2 p-1">
+                                        <div class="product_crad">
+                                            <div class="product_image">
+                                                <img src="assets/images/pro1.jpg" alt="product">
+                                                <span>أوريون</span>
+                                                <button>
+                                                    <i class="fa-sharp fa-light fa-heart"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product_info">
+                                                <h5 class="pro_name"
+                                                    title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
+                                                    <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
+                                                </h5>
+                                                <p class="pro_number">NO: 6287019946008</p>
+                                                <p class="trader">تاجر الرياض - 815</p>
+                                                <div class="price_buy">
+                                                    <h6>180 ريال</h6>
+                                                    <button>
+                                                        <i class="fa-regular fa-cart-shopping-fast"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="rate_sale">
+                                                    <p>
+                                                        <span class="old_price">400 ريال</span>
+                                                        <span class="sale">خصم 49.07%</span>
+                                                    </p>
+                                                    <a href="#!">
+                                                        <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6 p-lg-2 p-1">
-                                <div class="product_crad">
-                                    <div class="product_image">
-                                        <img src="assets/images/pro4.jpg" alt="product">
-                                        <span>أوريون</span>
-                                        <button>
-                                            <i class="fa-sharp fa-light fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="product_info">
-                                        <h5 class="pro_name" title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
-                                            <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
-                                        </h5>
-                                        <p class="pro_number">NO: 6287019946008</p>
-                                        <p class="trader">تاجر الرياض - 815</p>
-                                        <div class="price_buy">
-                                            <h6>180 ريال</h6>
-                                            <button>
-                                                <i class="fa-regular fa-cart-shopping-fast"></i>
-                                            </button>
+                                    <div class="col-lg-4 col-6 p-lg-2 p-1">
+                                        <div class="product_crad">
+                                            <div class="product_image">
+                                                <img src="assets/images/pro2.jpg" alt="product">
+                                                <span>أوريون</span>
+                                                <button>
+                                                    <i class="fa-sharp fa-light fa-heart"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product_info">
+                                                <h5 class="pro_name"
+                                                    title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
+                                                    <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
+                                                </h5>
+                                                <p class="pro_number">NO: 6287019946008</p>
+                                                <p class="trader">تاجر الرياض - 815</p>
+                                                <div class="price_buy">
+                                                    <h6>180 ريال</h6>
+                                                    <button>
+                                                        <i class="fa-regular fa-cart-shopping-fast"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="rate_sale">
+                                                    <p>
+                                                        <span class="old_price">400 ريال</span>
+                                                        <span class="sale">خصم 49.07%</span>
+                                                    </p>
+                                                    <a href="#!">
+                                                        <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="rate_sale">
-                                            <p>
-                                                <span class="old_price">400 ريال</span>
-                                                <span class="sale">خصم 49.07%</span>
-                                            </p>
-                                            <a href="#!">
-                                                <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
-                                            </a>
+                                    </div>
+                                    <div class="col-lg-4 col-6 p-lg-2 p-1">
+                                        <div class="product_crad">
+                                            <div class="product_image">
+                                                <img src="assets/images/pro3.jpg" alt="product">
+                                                <span>أوريون</span>
+                                                <button>
+                                                    <i class="fa-sharp fa-light fa-heart"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product_info">
+                                                <h5 class="pro_name"
+                                                    title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
+                                                    <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
+                                                </h5>
+                                                <p class="pro_number">NO: 6287019946008</p>
+                                                <p class="trader">تاجر الرياض - 815</p>
+                                                <div class="price_buy">
+                                                    <h6>180 ريال</h6>
+                                                    <button>
+                                                        <i class="fa-regular fa-cart-shopping-fast"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="rate_sale">
+                                                    <p>
+                                                        <span class="old_price">400 ريال</span>
+                                                        <span class="sale">خصم 49.07%</span>
+                                                    </p>
+                                                    <a href="#!">
+                                                        <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-6 p-lg-2 p-1">
+                                        <div class="product_crad">
+                                            <div class="product_image">
+                                                <img src="assets/images/pro4.jpg" alt="product">
+                                                <span>أوريون</span>
+                                                <button>
+                                                    <i class="fa-sharp fa-light fa-heart"></i>
+                                                </button>
+                                            </div>
+                                            <div class="product_info">
+                                                <h5 class="pro_name"
+                                                    title="طقم كشاف تويوتا أوريون غطاء أسود 2009-2011 قطعتين">
+                                                    <a href="product-details.html"> طقم كشاف تويوتا أوريون</a>
+                                                </h5>
+                                                <p class="pro_number">NO: 6287019946008</p>
+                                                <p class="trader">تاجر الرياض - 815</p>
+                                                <div class="price_buy">
+                                                    <h6>180 ريال</h6>
+                                                    <button>
+                                                        <i class="fa-regular fa-cart-shopping-fast"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="rate_sale">
+                                                    <p>
+                                                        <span class="old_price">400 ريال</span>
+                                                        <span class="sale">خصم 49.07%</span>
+                                                    </p>
+                                                    <a href="#!">
+                                                        <b>5 <i class="fa-sharp fa-solid fa-star"></i></b> (6)
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -382,6 +422,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
@@ -413,7 +454,6 @@
                             <li>
                                 <a href="blogs.html">المدونات</a>
                             </li>
-                            
                         </ul>
                     </div>
                 </div>

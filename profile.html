@@ -10,7 +10,6 @@
     <link rel="shortcut icon" href="assets/images/logo.svg" type="image/x-icon">
     <!-- Required CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="assets/css/filepond.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -128,10 +127,53 @@
         <!-- profile section -->
         <section class="profile_section">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row">
+                    <div class="col-lg-4 col-12 mb-lg-0 mb-4">
+                        <div class="profile_side_bar">
+                            <div class="user_img">
+                                <div class="img">
+                                    <img src="assets/images/av3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h6>محمود جمال الكومي</h6>
+                                <span>0555489846</span>
+                            </div>
+                            <ul class="links">
+                                <li class="active">
+                                    <a href="profile.html"><i class="fa-light fa-user-pen"></i> تعديل الحساب</a>
+                                </li>
+                                <li>
+                                    <a href="favourits.html"><i class="fa-sharp fa-light fa-heart"></i> المفضلة</a>
+                                </li>
+                                <li>
+                                    <a href="orders.html"><i class="fa-sharp fa-regular fa-store"></i> طلباتي</a>
+                                </li>
+                                <li>
+                                    <a href="auth.html"><i class="fa-sharp fa-regular fa-arrow-right-from-bracket"></i> تسجيل الخروج </a>
+                                </li>
+                                <li>
+                                    <a href="auth.html"><i class="fa-regular fa-user-xmark"></i> حذف الحساب</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="col-lg-8 col-12">
                         <form action="">
-                            <input type="file" class="filepond-multiple">
+                            <div class="input-field image-change-wrapper">
+                                <div class="img-wrap">
+                                    <img id="uploadedImage" src="assets/images/av3.jpg" alt="user">
+                                </div>
+                                <div class="d-flex w-100 pe-5 ps-5 justify-content-between align-items-center">
+                                    <label for="img">الصورةالشخصية</label>
+                                    <label class="upload">
+                                        <div class="plus">
+                                            <i class="fa-regular fa-plus"></i>
+                                        </div>
+                                        <input type="file" name="userImage" id="img-upload" accept="image/*">
+                                    </label>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <!-- field set -->
                                 <div class="input_field">
@@ -158,7 +200,7 @@
                                     value="05123456789">
                             </div>
                             <button>
-                                تأكيد
+                                إنشاء حساب
                             </button>
                         </form>
                     </div>
@@ -194,7 +236,6 @@
                             <li>
                                 <a href="blogs.html">المدونات</a>
                             </li>
-                            
                         </ul>
                     </div>
                 </div>
@@ -413,15 +454,18 @@
     <!-- JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/filepond.min.js"></script>
     <script>
-        // filepond
-        $(".filepond-multiple").filepond({
-            allowMultiple: true
+        let inputImg = document.getElementById("img-upload");
+        let uploadedImage = document.getElementById("uploadedImage");
+        inputImg.addEventListener("change", () => {
+            if (inputImg.files && inputImg.files[0]) {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    uploadedImage.src = e.target.result;
+                };
+                reader.readAsDataURL(inputImg.files[0]);
+            }
         });
-        function goBack() {
-            window.history.back();
-        }
     </script>
 </body>
 

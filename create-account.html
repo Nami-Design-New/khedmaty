@@ -121,142 +121,58 @@
             <h6>
                 <a href="index.html">الرئيسية</a>
                 <i class="fa-regular fa-angle-left"></i>
-                عربة التسوق
+                إنشاء حساب
             </h6>
         </div>
-        <!-- shopping_cart section -->
-        <section class="shopping_cart">
+        <!-- profile section -->
+        <section class="profile_section">
             <div class="container">
-                <div class="row">
-                    <!-- element -->
-                    <div class="col-12">
-                        <div class="item">
-                            <div class="item-info">
-                                <div class="img">
-                                    <img src="assets/images/pro5.png" alt="product">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-12">
+                        <form action="">
+                            <div class="input-field image-change-wrapper">
+                                <div class="img-wrap">
+                                    <img id="uploadedImage" src="assets/images/user.png" alt="user">
                                 </div>
-                                <div class="details">
-                                    <h6>طقم لمبات فيليبس ليد HB3/4</h6>
-                                    <p> <i class="fa-regular fa-tags"></i> <span>18</span> ريال</p>
-                                </div>
-                            </div>
-                            <div class="price_count">
-                                <div class="count">
-                                    <button>
-                                        <i class="fa-sharp fa-solid fa-minus"></i>
-                                    </button>
-                                    <input type="number" placeholder="2">
-                                    <button>
-                                        <i class="fa-sharp fa-solid fa-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="total">
-                                    <p>الاجمالي : <span>36</span> ريال</p>
-                                    <button>
-                                        <i class="fa-regular fa-trash-can-list"></i>
-                                    </button>
+                                <div class="d-flex w-100 pe-5 ps-5 justify-content-between align-items-center">
+                                    <label for="img">الصورةالشخصية</label>
+                                    <label class="upload">
+                                        <div class="plus">
+                                            <i class="fa-regular fa-plus"></i>
+                                        </div>
+                                        <input type="file" name="userImage" id="img-upload" accept="image/*">
+                                    </label>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- element -->
-                    <div class="col-12">
-                        <div class="item">
-                            <div class="item-info">
-                                <div class="img">
-                                    <img src="assets/images/pro6.png" alt="product">
+                            <div class="form-group">
+                                <!-- field set -->
+                                <div class="input_field">
+                                    <label for="firstName">
+                                        الاسم الاول
+                                    </label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="محمد "
+                                        value="محمود">
                                 </div>
-                                <div class="details">
-                                    <h6>طقم لمبات فيليبس ليد HB3/4</h6>
-                                    <p> <i class="fa-regular fa-tags"></i> <span>18</span> ريال</p>
-                                </div>
-                            </div>
-                            <div class="price_count">
-                                <div class="count">
-                                    <button>
-                                        <i class="fa-sharp fa-solid fa-minus"></i>
-                                    </button>
-                                    <input type="number" placeholder="2">
-                                    <button>
-                                        <i class="fa-sharp fa-solid fa-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="total">
-                                    <p>الاجمالي : <span>36</span> ريال</p>
-                                    <button>
-                                        <i class="fa-regular fa-trash-can-list"></i>
-                                    </button>
+                                <!-- field set -->
+                                <div class="input_field">
+                                    <label for="lastName">
+                                        الاسم الاخير
+                                    </label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="على" value="الكومي">
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- element -->
-                    <div class="col-12">
-                        <div class="item">
-                            <div class="item-info">
-                                <div class="img">
-                                    <img src="assets/images/pro4.jpg" alt="product">
-                                </div>
-                                <div class="details">
-                                    <h6>طقم لمبات فيليبس ليد HB3/4</h6>
-                                    <p> <i class="fa-regular fa-tags"></i> <span>18</span> ريال</p>
-                                </div>
+                            <!-- field set -->
+                            <div class="input_field">
+                                <label for="phone">
+                                    رقم الجوال
+                                </label>
+                                <input type="tel" id="phone" name="phone" placeholder="+566636522252 "
+                                    value="05123456789">
                             </div>
-                            <div class="price_count">
-                                <div class="count">
-                                    <button>
-                                        <i class="fa-sharp fa-solid fa-minus"></i>
-                                    </button>
-                                    <input type="number" placeholder="2">
-                                    <button>
-                                        <i class="fa-sharp fa-solid fa-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="total">
-                                    <p>الاجمالي : <span>36</span> ريال</p>
-                                    <button>
-                                        <i class="fa-regular fa-trash-can-list"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- element -->
-                    <div class="col-12">
-                        <div class="item">
-                            <div class="item-info">
-                                <div class="img">
-                                    <img src="assets/images/pro1.jpg" alt="product">
-                                </div>
-                                <div class="details">
-                                    <h6>طقم لمبات فيليبس ليد HB3/4</h6>
-                                    <p> <i class="fa-regular fa-tags"></i> <span>18</span> ريال</p>
-                                </div>
-                            </div>
-                            <div class="price_count">
-                                <div class="count">
-                                    <button>
-                                        <i class="fa-sharp fa-solid fa-minus"></i>
-                                    </button>
-                                    <input type="number" placeholder="2">
-                                    <button>
-                                        <i class="fa-sharp fa-solid fa-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="total">
-                                    <p>الاجمالي : <span>36</span> ريال</p>
-                                    <button>
-                                        <i class="fa-regular fa-trash-can-list"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="cart_total">
-                            <p>الإجمالى : <span>260</span> ريال</p>
-                            <a href="checkout.html">إطلب الآن</a>
-                        </div>
+                            <button>
+                                إنشاء حساب
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -508,6 +424,19 @@
     <!-- JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+        let inputImg = document.getElementById("img-upload");
+        let uploadedImage = document.getElementById("uploadedImage");
+        inputImg.addEventListener("change", () => {
+            if (inputImg.files && inputImg.files[0]) {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    uploadedImage.src = e.target.result;
+                };
+                reader.readAsDataURL(inputImg.files[0]);
+            }
+        });
+    </script>
 </body>
 
 </html>
